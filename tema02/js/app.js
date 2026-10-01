@@ -16,10 +16,6 @@ console.error("Error simulado: no se ha podido completar la operacion");
 }
 
 //navigator.userAgent es un texto que envia el navegador para identificarse
-
-
-
-
 function queNavegadorSoy(){
     const agente=navigator.userAgent;
     //mensaje para q lo vea el usuario
