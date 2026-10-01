@@ -32,3 +32,26 @@ En esta tarea he creado una pagina web utilizando HTML,Boostrap y Javascript. El
 # PROYECTO EN VISUAL
 
 
+**En esta captura se ve la captura del proyecto ev visual studio pa visualizar la pagina**
+![alt text](capturas/visual.png)
+
+
+# ¿QUIÉN HACE QUÉ?
+
+**HTML es la que organiza el contenido en la pagina. En el proyecto lo utilizo para el NAV,titulos,tablas de navegadores,textos y botones**
+
+# BOOTSTRAP
+
+** Bootstrap lo utilizo para dar estilo a la pagina sin tener que usar CSS. Lo utilizo para diseñar la barra de navegacion,tabla y botones**
+
+
+# JAVASCRIPT
+
+**Javascript nos permite que los botones hagan acciones/iteraciones (saludar,simular error,abir una ventana emergente,oculta menús)**
+
+
+# FUENTES
+
+**Bootstrap 5.3**
+**https://developer.mozilla.org/es/docs/Web/JavaScript/Guide**
+**https://es.javascript.info/**
