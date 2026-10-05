@@ -42,7 +42,7 @@ En esta tarea he creado una pagina web utilizando HTML,Boostrap y Javascript. El
 
 # BOOTSTRAP
 
-** Bootstrap lo utilizo para dar estilo a la pagina sin tener que usar CSS. Lo utilizo para diseñar la barra de navegacion,tabla y botones**
+**Bootstrap lo utilizo para dar estilo a la pagina sin tener que usar CSS. Lo utilizo para diseñar la barra de navegacion,tabla y botones**
 
 
 # JAVASCRIPT
