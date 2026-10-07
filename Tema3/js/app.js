@@ -88,6 +88,10 @@ function ejercicio3() {
   // Ejemplo: una expresión que mezcla tipos
   console.log('"5" - 2 →', "5" - 2);   // espero [tu predicción]
 
+  console.log('"5"-2->',"5"-2);//espero 3
+  console.log('"5"+2->',"5"+2);//espero "52"
+
+
   // TODO: cinco expresiones más que mezclen tipos (al menos dos inventadas por ti), cada una con su «espero …».
 
   // Ejemplo: la misma pareja comparada con == y con ===
