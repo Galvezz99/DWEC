@@ -61,9 +61,18 @@ function ejercicio2() {
   const d =Number("");
   console.log('Number("") →', d, typeof d);
 
-  const e=Number("123");
-  console.log('Number("123") →', b, typeof b);
+  const e=Number(true);
+  console.log('Number(true) →', e, typeof e);
 
+
+  const f= Boolean(0);
+  console.log("Boolean(0) →", f, typeof f);
+
+  const g =Boolean("texto");
+  console.log('Boolean("texto") →', g, typeof g);
+
+  const h = Boolean("");       
+  console.log('Boolean("") →', h, typeof h);
   
   // TODO: el resto de conversiones obligatorias, cada una con su «espero …»:
   //       Number("123"), Number("12abc"), Number(""), Number(true),
@@ -108,3 +117,6 @@ function ejercicio4() {
   // TODO: compara las dos con === y muestra el resultado en la consola: tiene que salir true.
 
   // Recuerda: el error de dar otro valor a una const se provoca en la consola del navegador, no aquí.
+
+
+}
