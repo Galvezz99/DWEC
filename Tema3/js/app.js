@@ -1,5 +1,5 @@
 /*
-  Tarea 3 · DWEC · [Tu nombre y apellidos]
+  Tarea 3 · DWEC · German Galvez Aranda
   Variables, tipos y conversiones.
 
   Cómo usar esta plantilla:
@@ -20,6 +20,22 @@ function ejercicio1() {
   const edad = 20;   // number
   console.log("edad =", edad, "→", typeof edad);
 
+  const nombre="German";
+  console.log("nombre = ",nombre, "->",typeof nombre);
+
+    const esEstudiante=true;
+    console.log("esEstudiante =", esEstudiante, "->",typeof esEstudiante);
+
+    const sinValor=null;
+    console.log("sinValor=",sinValor,"->", typeof sinValor);
+
+    let ciudad;
+    console.log("ciudad=",ciudad,"->",typeof ciudad);
+    ciudad="Madrid";
+    console.log("ciudad=",ciudad,"->",typeof ciudad);
+    const enteroGrande=10n;
+    console.log("enteroGrande=",enteroGrande,"->",typeof enteroGrande);
+
   // TODO: declara una variable de cada tipo que falta: string, boolean, null, undefined y bigint (como 10n).
   //       const si no va a cambiar; let para al menos una a la que des valor más tarde.
   // TODO: muestra en la consola el valor y el typeof de cada una, como en el ejemplo.
@@ -36,6 +52,19 @@ function ejercicio2() {
   const a = String(123);   // espero [tu predicción]
   console.log("String(123) →", a, typeof a);
 
+  const b=Number("123");
+  console.log('Number("123") →', b, typeof b);
+
+  const c=Number("12abc");
+  console.log('Number("12abc") →', c, typeof c);
+
+  const d =Number("");
+  console.log('Number("") →', d, typeof d);
+
+  const e=Number("123");
+  console.log('Number("123") →', b, typeof b);
+
+  
   // TODO: el resto de conversiones obligatorias, cada una con su «espero …»:
   //       Number("123"), Number("12abc"), Number(""), Number(true),
   //       Boolean(0), Boolean("texto") y Boolean("").
