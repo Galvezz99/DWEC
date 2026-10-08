@@ -16,13 +16,14 @@
 
 ### a) La página entera
 
-<img src="capturas/a-pagina.png" alt="La página entera con mi nombre en la navbar" width="600">
+<img src="capturas/image.png" alt="La página entera con mi nombre en la navbar" width="600">
 
 [Qué se ve: tu nombre en la navbar, las cuatro cards y los fallos de predicción marcados.]
 
 ### b) Consola del ejercicio 1
+<img src="capturas/1.png/image.png" alt="La página entera con mi nombre en la navbar" width="600">
 
-![Consola del ejercicio 1](capturas/b-consola-ej1.png)
+![Consola del ejercicio 1](capturas/1.png.png)
 
 [Qué se ve, en una o dos líneas.]
 
