@@ -89,8 +89,8 @@ function ejercicio3() {
   console.log('"5" - 2 →', "5" - 2);   // espero [tu predicción]
   console.log('"5"-2->',"5"-2);//espero 3
   console.log('"5"+2->',"5"+2);//espero "52"
-
-
+   console.log('"10" * 2 →', "10" * 2); //espero 20
+  console.log('"10" * 2 →', "10" / 2); //espero 5
  
 }
 
@@ -112,6 +112,8 @@ function ejercicio4() {
   horasEstudiadas+=2;
   // TODO: por ejemplo, las horas que has estudiado esta semana. Después súmale algo con +=.
 
+  alert(ficha);
+  console.log(ficha);
   // La ficha con plantilla de cadena: backticks (`) y ${ }
   const ficha = "Soy " + nombre + ", estudio " + ciclo + ", estoy en " + curso + " y mi afición son los " + aficion + ". He estudiado " + horasEstudiadas + " horas esta semana.";
   console.log(ficha);
