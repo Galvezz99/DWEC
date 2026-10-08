@@ -28,6 +28,7 @@
 [Qué se ve, en una o dos líneas.]
 
 ### c) Consola del ejercicio 2
+<img src="capturas/2.png" alt="La página entera con mi nombre en la navbar" width="600">
 
 ![Consola del ejercicio 2](capturas/c-consola-ej2.png)
 
