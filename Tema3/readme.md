@@ -1,6 +1,6 @@
 # Tarea 3 · Variables, tipos y conversiones
 
-**Autor:** [German Galvez Aranda] · Desarrollo Web en Entorno Cliente (DWEC) · 2.º DAW · Curso 2026-27
+**Autor:** German Galvez Aranda · Desarrollo Web en Entorno Cliente (DWEC) · 2.º DAW · Curso 2026-27
 
 > **Plantilla de la tarea 3.** Cómo usarla:
 >
