@@ -160,14 +160,17 @@
         </div>
 
         <!-- 4) Tu explicación -->
-        <p class="small mb-0"><strong>El caso de null:</strong> [explica en una línea qué pasa con typeof null]</p>
+       <p class="small mb-0">
+  <strong>El caso de null:</strong> Aunque <code>null</code> representa ausencia de valor,
+  <code>typeof null</code> devuelve <code>"object"</code>.
+</p>
       </div>
 
       <!-- 5) El botón. onclick="ejercicio1()" hace que, al pulsarlo, se ejecute la función ejercicio1() de js/app.js.
               Cómo funciona lo veremos más adelante, con los eventos. De momento, cópialo tal cual y cambia solo el número. -->
       <div class="card-footer">
         <button type="button" class="btn btn-primary" onclick="ejercicio2()">
-          <i class="bi bi-play-fill"></i> Ejecutar ejercicio 1
+          <i class="bi bi-play-fill"></i> Ejecutar ejercicio 2
         </button>
         <span class="small text-body-secondary ms-2">El resultado sale en la consola (F12).</span>
       </div>
@@ -190,13 +193,19 @@
 
         <!-- 2) El código: cuando termines, copia aquí tu función ejercicio1() de js/app.js.
                 Si tu código lleva los signos < o >, escríbelos como &lt; y &gt; -->
-        <pre class="bg-dark text-light p-3 rounded small mb-4"><code>function ejercicio1() {
-  console.log("--- Ejercicio 1 · Variables y typeof ---");
-  const edad = 20;   // number
-  console.log("edad =", edad, "→", typeof edad);
+        <pre class="bg-dark text-light p-3 rounded small mb-4"><code>function ejercicio3() {
 
-  [aquí va el resto de tu código]
-}</code></pre>
+          console.log("--- Ejercicio 3 · Coerción y comparaciones ---");
+          // Ejemplo: una expresión que mezcla tipos
+          console.log('"5"-2->',"5"-2);//espero 3
+          console.log('"5"+2->',"5"+2);//espero 52
+          console.log('"10"*2->',"10"*2);//espero 20
+          console.log('"10"+2->',"10"+2);//espero 102
+          console.log('true+1->',true +1);//espero 2
+          console.log('"10" / 2 →', "10" / 2);//espero 5
+
+
+        }</code></pre>
 
         <!-- 3) La tabla «Espero / Sale», rellenada a mano.
                 Una fila por variable. Si te equivocas, añade en la columna «Sale» el badge:
@@ -221,7 +230,7 @@
               Cómo funciona lo veremos más adelante, con los eventos. De momento, cópialo tal cual y cambia solo el número. -->
       <div class="card-footer">
         <button type="button" class="btn btn-primary" onclick="ejercicio3()">
-          <i class="bi bi-play-fill"></i> Ejecutar ejercicio 1
+          <i class="bi bi-play-fill"></i> Ejecutar ejercicio 3
         </button>
         <span class="small text-body-secondary ms-2">El resultado sale en la consola (F12).</span>
       </div>
@@ -274,8 +283,8 @@
       <!-- 5) El botón. onclick="ejercicio1()" hace que, al pulsarlo, se ejecute la función ejercicio1() de js/app.js.
               Cómo funciona lo veremos más adelante, con los eventos. De momento, cópialo tal cual y cambia solo el número. -->
       <div class="card-footer">
-        <button type="button" class="btn btn-primary" onclick="ejercicio1()">
-          <i class="bi bi-play-fill"></i> Ejecutar ejercicio 1
+        <button type="button" class="btn btn-primary" onclick="ejercicio4()">
+          <i class="bi bi-play-fill"></i> Ejecutar ejercicio 4
         </button>
         <span class="small text-body-secondary ms-2">El resultado sale en la consola (F12).</span>
       </div>
