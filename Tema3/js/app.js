@@ -99,32 +99,20 @@ function ejercicio3() {
 function ejercicio4() {
   console.log("--- Ejercicio 4 · Tu ficha con plantillas de cadena ---");
 
-  // Tus datos, con const
   const nombre = "German";
   const ciclo="DAW";
   const curso="1º";
   const aficion="videojuegoss";
-  // TODO: ciclo, curso y una afición, también con const.
-
-  // Un dato que cambia, con let
 
   let horasEstudiadas=5;
   horasEstudiadas+=2;
-  // TODO: por ejemplo, las horas que has estudiado esta semana. Después súmale algo con +=.
 
   alert(ficha);
   console.log(ficha);
-  // La ficha con plantilla de cadena: backticks (`) y ${ }
   const ficha = "Soy " + nombre + ", estudio " + ciclo + ", estoy en " + curso + " y mi afición son los " + aficion + ". He estudiado " + horasEstudiadas + " horas esta semana.";
   console.log(ficha);
 
   console.log("¿Las fichas son iguales?->",ficha===ficha);
-  // TODO: completa la ficha con todos tus datos y muéstrala con alert() y en la consola.
-
-  // TODO: escribe la misma ficha concatenando con + en una constante fichaConMas y muéstrala en la consola.
-  // TODO: compara las dos con === y muestra el resultado en la consola: tiene que salir true.
-
-  // Recuerda: el error de dar otro valor a una const se provoca en la consola del navegador, no aquí.
 
 
 }
