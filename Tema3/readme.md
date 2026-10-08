@@ -41,7 +41,15 @@
 
 ## Fuentes
 
-- [Título de la página](https://enlace-a-la-fuente)
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeofs
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion
 
 ## Uso de IA
 
