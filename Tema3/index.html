@@ -117,13 +117,32 @@
 
         <!-- 2) El código: cuando termines, copia aquí tu función ejercicio1() de js/app.js.
                 Si tu código lleva los signos < o >, escríbelos como &lt; y &gt; -->
-        <pre class="bg-dark text-light p-3 rounded small mb-4"><code>function ejercicio1() {
-  console.log("--- Ejercicio 1 · Variables y typeof ---");
-  const edad = 20;   // number
-  console.log("edad =", edad, "→", typeof edad);
+        <pre class="bg-dark text-light p-3 rounded small mb-4"><code>function ejercicio2() {
+           const a = String(123);
+          console.log("String(123) →", a, typeof a);
 
-  [aquí va el resto de tu código]
-}</code></pre>
+          const b=Number("123");
+          console.log('Number("123") →', b, typeof b);
+
+          const c=Number("12abc");
+          console.log('Number("12abc") →', c, typeof c);
+
+          const d =Number("");
+          console.log('Number("") →', d, typeof d);
+
+          const e=Number(true);
+          console.log('Number(true) →', e, typeof e);
+
+          const f= Boolean(0);
+          console.log("Boolean(0) →", f, typeof f);
+
+          const g =Boolean("texto");
+          console.log('Boolean("texto") →', g, typeof g);
+
+           const h = Boolean("");       
+         console.log('Boolean("") →', h, typeof h);
+  
+      }</code></pre>
 
         <!-- 3) La tabla «Espero / Sale», rellenada a mano.
                 Una fila por variable. Si te equivocas, añade en la columna «Sale» el badge:
