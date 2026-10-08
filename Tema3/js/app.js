@@ -87,18 +87,14 @@ function ejercicio3() {
 
   // Ejemplo: una expresión que mezcla tipos
   console.log('"5" - 2 →', "5" - 2);   // espero [tu predicción]
-
   console.log('"5"-2->',"5"-2);//espero 3
   console.log('"5"+2->',"5"+2);//espero "52"
+  console.log('"10"*2->',"10"*2);//espero "20"
+  console.log('"10"+2->',"10"+2);//espero "102"
+  console.log('true+1->',true +1);//espero "2"
 
 
-  // TODO: cinco expresiones más que mezclen tipos (al menos dos inventadas por ti), cada una con su «espero …».
-
-  // Ejemplo: la misma pareja comparada con == y con ===
-  console.log('5 == "5" →', 5 == "5");     // espero [tu predicción]
-  console.log('5 === "5" →', 5 === "5");   // espero [tu predicción]
-
-  // TODO: haz lo mismo con 0 y false, y con null y undefined.
+ 
 }
 
 
@@ -107,7 +103,10 @@ function ejercicio4() {
   console.log("--- Ejercicio 4 · Tu ficha con plantillas de cadena ---");
 
   // Tus datos, con const
-  const nombre = "[Tu nombre]";
+  const nombre = "German";
+  const ciclo="DAW";
+  const curso="1º";
+  const aficion="videojuegoss";
   // TODO: ciclo, curso y una afición, también con const.
 
   // Un dato que cambia, con let
