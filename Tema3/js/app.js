@@ -90,7 +90,9 @@ function ejercicio3() {
 
   console.log('"5"-2->',"5"-2);//espero 3
   console.log('"5"+2->',"5"+2);//espero "52"
-
+  console.log('5 + "2" →', 5 + "2");
+  console.log('"5" * "2" →', "5" * "2");//espero 10
+  console.log('true + 1 →', true + 1);// espero 2  
 
   // TODO: cinco expresiones más que mezclen tipos (al menos dos inventadas por ti), cada una con su «espero …».
 
