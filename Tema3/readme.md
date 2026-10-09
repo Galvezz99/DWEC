@@ -25,7 +25,8 @@
 
 ### d) Consola del ejercicio 3
 
-![Consola del ejercicio 3](capturas/d-consola-ej3.png)
+<img width="1920" height="1033" alt="image" src="https://github.com/user-attachments/assets/82dbd147-5a22-444d-b4db-51844625b9d0" />
+
 
 [Qué se ve, en una o dos líneas.]
 
