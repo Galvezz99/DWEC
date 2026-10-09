@@ -9,37 +9,36 @@
 
 <img src="capturas/image.png" alt="La página entera con mi nombre en la navbar" width="600">
 
-[Qué se ve: tu nombre en la navbar, las cuatro cards y los fallos de predicción marcados.]
+En la página se pueden ver los 4 ejercicios de la práctica, cada ejercicio tiene su código,una tabla con las predicciones y los resultados.
 
 ### b) Consola del ejercicio 1
 <img src="capturas/1.png" alt="La página entera con mi nombre en la navbar" width="600">
 
 ![Consola del ejercicio 1](capturas/1.png.png)
 
-[Qué se ve, en una o dos líneas.]
+En la consola muestro las variables del ejercicio 1 con sus valores y tipos de datos.
 
 ### c) Consola del ejercicio 2
 <img src="capturas/2.png" alt="La página entera con mi nombre en la navbar" width="600">
 
-[Qué se ve, en una o dos líneas.]
+En la consola aparece los resultados de las conversiones explicitas con STRING,NUMBER Y BOOLEAN. Se puede ver cómo cambia el tipo de dato según la conversión
 
 ### d) Consola del ejercicio 3
 
 <img width="1920" height="1033" alt="image" src="https://github.com/user-attachments/assets/82dbd147-5a22-444d-b4db-51844625b9d0" />
 
-
-[Qué se ve, en una o dos líneas.]
+Se muestran los resultados de distintas operaciones entre números, textos y valores booleanos
 
 ### e) Consola del ejercicio 4, con el error de la const
 
 <img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/1d9e6ed0-9162-48db-9caf-772a241a5500" />
 
 
-[Qué se ve, en una o dos líneas.]
+En este ejercicio creamos una ficha personal utilizando una plantilla de cadena, también utilizamos LET para modificar las horas estudiadas y se compara la ficha con otra creada mediante concatenación
 
 ## Reflexión
 
-[De 5 a 8 líneas: ¿qué conversiones te resultaron más intuitivas y cuáles te sorprendieron? Pon ejemplos concretos de tus tablas.]
+Las conversiones que mas fácil son STRING Y NUMBER , por que permite transformar textos en números y números en textos. Me ha sorprendido que TYPE NULL devuelva object por que NULL representa la ausencia del valor
 
 ## Fuentes
 
@@ -55,4 +54,4 @@ https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion
 
 ## Uso de IA
 
-[Si has usado IA: qué herramienta, para qué y qué hiciste después con su respuesta. Si no la has usado, borra este apartado.]
+He utilizado ChatGPT como herramienta de inteligencia artificial para ver ejemplos de código JavaScript y comprender mejor las actividades. Me ha ayudado a entender las variables, los tipos de datos, las conversiones y las comparaciones.
