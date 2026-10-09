@@ -14,25 +14,35 @@ console.log("app.js cargado: pulsa «Ejecutar» en cada ejercicio");
 
 // Ejercicio 1 · Variables y typeof
 function ejercicio1() {
+  //Mostrar el titulo del ejercicio
   console.log("--- Ejercicio 1 · Variables y typeof ---");
 
-  // Ejemplo: una variable y su typeof en la consola
+  //creamos una constante llamada edad
+  //typeof permite conocer el tipo d dato en una variable
   const edad = 20;   // number
   console.log("edad =", edad, "→", typeof edad);
-
+  // Guardamos un texto en la variable nombre.
+  // Los textos pertenecen al tipo string
   const nombre="German";
   console.log("nombre = ",nombre, "->",typeof nombre);
-
+    // Guardamos true, que representa un valor verdadero. 
+  // Su tipo de dato es boolean
     const esEstudiante=true;
+    // Muestra el nombre d la variable, su valor y su tipo d dato en la consola.
     console.log("esEstudiante =", esEstudiante, "->",typeof esEstudiante);
 
     const sinValor=null;
     console.log("sinValor=",sinValor,"->", typeof sinValor);
-
+    // Declaramos ciudad con let, pero todavía no le damos ningún valor.
+  // Por eso, su valor es undefined
     let ciudad;
     console.log("ciudad=",ciudad,"->",typeof ciudad);
+    // Asignamos un texto a ciudad. 
+  // Ahora su valor es "Madrid" y su tipo es string.
     ciudad="Madrid";
     console.log("ciudad=",ciudad,"->",typeof ciudad);
+    // La n al final indica que es un número entero de tipo bigint.
+  // Este tipo permite representar enteros muy grandes.
     const enteroGrande=10n;
     console.log("enteroGrande=",enteroGrande,"->",typeof enteroGrande);
 
@@ -44,12 +54,12 @@ function ejercicio1() {
 
 
 // Ejercicio 2 · Conversiones explícitas
-// Escribe el comentario «espero …» ANTES de ejecutar. Si fallas, no lo cambies: márcalo en la tabla de la página.
 function ejercicio2() {
   console.log("--- Ejercicio 2 · Conversiones explícitas ---");
 
-  // Ejemplo: una conversión, tu predicción y el resultado con su tipo
-  const a = String(123);   // espero [tu predicción]
+ // String() convierte un valor en texto.
+  // 123 deja de ser un número y pasa a ser "123".
+  const a = String(123);  
   console.log("String(123) →", a, typeof a);
 
   const b=Number("123");
