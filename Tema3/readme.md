@@ -32,7 +32,8 @@
 
 ### e) Consola del ejercicio 4, con el error de la const
 
-![Consola del ejercicio 4 con el error de la const](capturas/e-consola-ej4.png)
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/1d9e6ed0-9162-48db-9caf-772a241a5500" />
+
 
 [Qué se ve, en una o dos líneas.]
 
