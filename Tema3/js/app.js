@@ -2,37 +2,40 @@
   Tarea 3 · DWEC · German Galvez Aranda
   Variables, tipos y conversiones.
 
-  Cómo usar esta plantilla:
-  · Hay una función por ejercicio. Cada una se ejecuta al pulsar su botón «Ejecutar» de index.html.
-  · Escribe tu código DENTRO de cada función, donde pone TODO. Cuando lo hagas, borra el TODO.
-  · Solo console.log() y alert(): el JavaScript no escribe nada dentro de la página.
-  · let y const, nunca var. Comillas rectas (" o ').
-*/
-
 console.log("app.js cargado: pulsa «Ejecutar» en cada ejercicio");
 
 
 // Ejercicio 1 · Variables y typeof
 function ejercicio1() {
+  //Mostrar el titulo del ejercicio
   console.log("--- Ejercicio 1 · Variables y typeof ---");
 
-  // Ejemplo: una variable y su typeof en la consola
+  //creamos una constante llamada edad
+  //typeof permite conocer el tipo d dato en una variable
   const edad = 20;   // number
   console.log("edad =", edad, "→", typeof edad);
-
+  // Guardamos un texto en la variable nombre.
+  // Los textos pertenecen al tipo string
   const nombre="German";
   console.log("nombre = ",nombre, "->",typeof nombre);
-
+    // Guardamos true, que representa un valor verdadero. 
+  // Su tipo de dato es boolean
     const esEstudiante=true;
+    // Muestra el nombre d la variable, su valor y su tipo d dato en la consola.
     console.log("esEstudiante =", esEstudiante, "->",typeof esEstudiante);
 
     const sinValor=null;
     console.log("sinValor=",sinValor,"->", typeof sinValor);
-
+    // Declaramos ciudad con let, pero todavía no le damos ningún valor.
+  // Por eso, su valor es undefined
     let ciudad;
     console.log("ciudad=",ciudad,"->",typeof ciudad);
+    // Asignamos un texto a ciudad. 
+  // Ahora su valor es "Madrid" y su tipo es string.
     ciudad="Madrid";
     console.log("ciudad=",ciudad,"->",typeof ciudad);
+    // La n al final indica que es un número entero de tipo bigint.
+  // Este tipo permite representar enteros muy grandes.
     const enteroGrande=10n;
     console.log("enteroGrande=",enteroGrande,"->",typeof enteroGrande);
 
@@ -44,23 +47,28 @@ function ejercicio1() {
 
 
 // Ejercicio 2 · Conversiones explícitas
-// Escribe el comentario «espero …» ANTES de ejecutar. Si fallas, no lo cambies: márcalo en la tabla de la página.
 function ejercicio2() {
   console.log("--- Ejercicio 2 · Conversiones explícitas ---");
 
-  // Ejemplo: una conversión, tu predicción y el resultado con su tipo
-  const a = String(123);   // espero [tu predicción]
+ // String() convierte un valor en texto.
+  // 123 deja de ser un número y pasa a ser "123".
+  const a = String(123);  
   console.log("String(123) →", a, typeof a);
 
+  // Number() convierte un texto numérico en un número.
+  // El resultado es 123 y su tipo es number.
   const b=Number("123");
   console.log('Number("123") →', b, typeof b);
-
+  // Este texto contiene letras y no representa un número válido.
+  // Por eso, Number() devuelve NaN. 
+  // NaN significa "Not a Number" (no es un número válido).
   const c=Number("12abc");
   console.log('Number("12abc") →', c, typeof c);
-
+  // Una cadena vacía convertida con Number() se transforma en 0.
   const d =Number("");
   console.log('Number("") →', d, typeof d);
-
+  
+  // Number() convierte true en 1.
   const e=Number(true);
   console.log('Number(true) →', e, typeof e);
 
@@ -84,10 +92,16 @@ function ejercicio2() {
 // Ejercicio 3 · Coerción y comparaciones
 function ejercicio3() {
   console.log("--- Ejercicio 3 · Coerción y comparaciones ---");
-
   // Ejemplo: una expresión que mezcla tipos
-  console.log('"5" - 2 →', "5" - 2);   // espero [tu predicción]
+
+  // El operador - convierte el texto "5" en el número 5.
+  // Después realiza la resta: 5 - 2 = 3.
+  console.log('"5" - 2 →', "5" - 2);   
   console.log('"5"-2->',"5"-2);//espero 3
+  
+  // El operador + puede sumar números o unir textos.
+  // Como "5" es un texto, JavaScript concatena ambos valores.
+  // El resultado es el texto "52", no el número 7.
   console.log('"5"+2->',"5"+2);//espero "52"
    console.log('"10" * 2 →', "10" * 2); //espero 20
   console.log('"10" * 2 →', "10" / 2); //espero 5
@@ -98,16 +112,22 @@ function ejercicio3() {
 // Ejercicio 4 · Tu ficha con plantillas de cadena
 function ejercicio4() {
   console.log("--- Ejercicio 4 · Tu ficha con plantillas de cadena ---");
-
+// Guardamos los datos personales que aparecerán en la ficha.
   const nombre = "German";
   const ciclo="DAW";
   const curso="1º";
   const aficion="videojuegoss";
-
+// let permite modificar el valor de la variable.
+  // Inicialmente hemos estudiado 5 horas.
   let horasEstudiadas=5;
+// El operador += suma 2 al valor actual.
+  // Es equivalente a escribir: // horasEstudiadas = horasEstudiadas + 2;
+  // Ahora horasEstudiadas vale 7.
+  
   horasEstudiadas+=2;
-
+// Mostramos la ficha en una ventana emergente.
   alert(ficha);
+  //mostramos x consola
   console.log(ficha);
   const ficha = "Soy " + nombre + ", estudio " + ciclo + ", estoy en " + curso + " y mi afición son los " + aficion + ". He estudiado " + horasEstudiadas + " horas esta semana.";
   console.log(ficha);
