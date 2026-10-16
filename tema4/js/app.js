@@ -81,6 +81,8 @@ function dividir() {
      if(Number.isNaN(1)|| Number.isNaN(n2)){
         mostrar("Escribe los dos numeros antes de operar","danger");
         console.warn("Dividir:falta algun numero");
+
+        //se compara q no se divida entre 0
      }else if(n2===0){
         mostrar("No se puede dividir entre 0","danger");
         console.warn("Dividir:division entre 0");
@@ -91,21 +93,42 @@ function dividir() {
 
      }
 
-
-
-
-
-
 }
 
 function potencia() {
-  // TODO: como sumar(), con el operador **
+ 
+    const n1=leerNumero("numero1");
+    const n2=leerNumero("numero2");
+
+    if(Number.isNaN(1)|| Number.isNaN(n2)){
+        mostrar("Escribe los dos numeros antes de operar","danger");
+        console.warn("Modulo:falta algun numero");
+
+    }else{
+        const resultado= n1** n2;
+        mostrar('${n1} ^  {$n2}= ${resultado}');
+        console.log('Potencia:${n1}**${n2}=${resultado}');
+
+    }
 }
 
 function modulo() {
-  // TODO: el resto de la división, con el operador %
-  // TODO: si el número 2 es 0, muestra un error en rojo (5 % 0 da NaN).
+ const n1=leerNumero("numero1");
+const n2=leerNumero("numero2");
+
+    if(Number.isNaN(1)|| Number.isNaN(n2)){
+        mostrar("Escribe los dos numeros antes de operar","danger");
+        console.warn("Modulo:falta algun numero");
+
+    }else{
+        const resultado= n1% n2;
+        mostrar('${n1} %  {$n2}= ${resultado}');
+        console.log('Modulo:${n1}%${n2}=${resultado}');
+
+    }
 }
+
+
 
 
 // ============================================================
