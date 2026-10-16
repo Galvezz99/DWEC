@@ -1,5 +1,5 @@
 /*
-  Tarea 4 · DWEC · [Tu nombre y apellidos]
+  Tarea 4 · DWEC · [German Galvez Aranda]
   Calculadora y bucles.
 
   Cómo usar esta plantilla:
@@ -36,7 +36,20 @@ function sumar() {
 }
 
 function restar() {
-  // TODO: como sumar(), con el operador -
+  
+    //lee el numero d cda casilla/devuelve NAN si esta vacia
+    const n1=leerNumero("numero1");
+    const n2=leerNumero("numero2");
+
+    //si falta alguno de los 2 numeros,avisa del error 
+    if(Number.isNaN(1)|| Number.isNaN(n2)){
+        mostrar("Escribe los dos numeros antes de operar","danger");
+        console.warn("Multiplicar:falta algun numero");
+    }else{
+        const resultado= n1*n2;
+        mostrar('${n1} x {$n2}= ${resultado}');
+    }
+
 }
 
 function multiplicar() {
