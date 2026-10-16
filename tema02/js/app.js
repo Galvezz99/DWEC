@@ -6,6 +6,11 @@ function saludar(){
     console.log("Boton SALUDAR pulsado");
 }
 
+function despedida(){
+    console.log("ME VOY");
+}
+
+
 
 //Boton 2
 
@@ -14,6 +19,8 @@ function saludar(){
 function simularError(){
 console.error("Error simulado: no se ha podido completar la operacion");
 }
+
+
 
 //navigator.userAgent es un texto que envia el navegador para identificarse
 function queNavegadorSoy(){
