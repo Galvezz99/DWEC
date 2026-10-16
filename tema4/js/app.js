@@ -136,7 +136,30 @@ const n2=leerNumero("numero2");
 // ============================================================
 
 function cualEsMayor() {
-  // TODO: con if, else if y else, di cuál de los dos números es mayor o si son iguales.
+
+const n1= leerNumero("Numero1");
+const n2= leerNumero("Numero2");
+
+if(Number.isNaN(1)|| Number.isNaN(n2)){
+        mostrar("Escribe los dos numeros antes de operar","danger");
+        console.warn("Modulo:falta algun numero");
+//caso1
+}else if(n1>n2){
+    mostrar('${n1}es mayor que ${n2}= ${resultado}',"info");
+    console.log('¿Cual es mayor?:${n1}>${n2}');
+
+}else if(n1<n2){
+    //caso 2:el primero es mayor
+    mostrar('${n2}es mayor que ${n1}= ${resultado}',"info");
+    console.log('¿cual es mayor?: ${n1} < ${n2}');
+
+} else {
+    // Caso 3: no es ni mayor ni menor, así que son iguales
+    mostrar(`${n1} y ${n2} son iguales`, "info");
+    console.log(`¿Cuál es mayor?: ${n1} === ${n2}`);
+  }
+
+
 }
 
 function parOImpar() {
