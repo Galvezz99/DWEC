@@ -43,17 +43,34 @@ function restar() {
 
     //si falta alguno de los 2 numeros,avisa del error 
     if(Number.isNaN(1)|| Number.isNaN(n2)){
+        //muestra el error en la pagina
         mostrar("Escribe los dos numeros antes de operar","danger");
-        console.warn("Multiplicar:falta algun numero");
+        //deja el aviso en consola
+        console.warn("Restar:falta algun numero");
     }else{
-        const resultado= n1*n2;
-        mostrar('${n1} x {$n2}= ${resultado}');
+        //si estan los dos,hace mult y lo guarda
+        const resultado= n1-n2;
+        //muestra la operacion en la pagina
+        mostrar('${n1} -  {$n2}= ${resultado}');
+        //deja el resultado en consola
+        console.log('Restar:${n1}-${n2}=${resultado}');
     }
 
 }
 
 function multiplicar() {
-  // TODO: como sumar(), con el operador *
+  const n1=leerNumero("numero1");
+    const n2=leerNumero("numero2");
+     if(Number.isNaN(1)|| Number.isNaN(n2)){
+        mostrar("Escribe los dos numeros antes de operar","danger");
+        console.warn("Multiplicar:falta algun numero");
+     }else{
+        const resultado= n1*n2;
+        mostrar('${n1} x {$n2}= ${resultado}');
+        console.log('Multiplicar:${n1}*${n2}=${resultado}');
+
+     }
+
 }
 
 function dividir() {
