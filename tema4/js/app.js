@@ -284,21 +284,29 @@ function badgesWhile() {
 
   if(Number.isNaN(veces) || !Number.isInteger(veces) || veces < 0 || veces > MAXIMO_REPETICIONES){
       mostrar("Introduce un numero entero entre 0 y 20","danger");
-      console.warn("Badges for:numero no valido");
+      console.warn("Badges while for:numero no valido");
   }else{
     let contador=0;
-    for(let i=1;i<=veces;i++){
-      const color = i % 2=== 0 ? "success" : "primary"; 
-      anadirBadge(i,color);
+    while(contador < veces){
       contador++;
+      const color = contador % 2=== 0 ? "success" : "primary"; 
+      anadirBadge(i,color);
     }
 
     anadirLinea(`Total:${contador} ${contador===1 ? "repeticion": "repeticiones"}`);
-    console.log(`while:total de ${contador} repeticiones`);
+    console.log(`Badges while:total de ${contador} repeticiones`);
   }
 }
 
 
 function badgesDoWhile() {
-  // TODO: lo mismo que badgesFor(), con un do…while.
+
+
+
+
+
+
+
+
+  
 }
