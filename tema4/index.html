@@ -9,16 +9,15 @@
   <!-- Hace que la página se adapte al tamaño de móviles y ordenadores -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Título que aparece en la pestaña del navegador -->
-  <!-- Sustituye [Tu nombre] por tu nombre -->
-  <title>Calculadora y bucles · [Tu nombre]</title>
 
-  <!-- Carga los estilos de Bootstrap -->
+  <title>Calculadora y bucles German Galvez Aranda</title>
+
+  <!-- estilos de Bootstrap -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     rel="stylesheet">
 
-  <!-- Carga los iconos de Bootstrap -->
+  <!--iconos de Bootstrap -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     rel="stylesheet">
@@ -26,17 +25,16 @@
 
 <body>
 
-  <!-- BARRA SUPERIOR: muestra el nombre y la asignatura -->
+  <!-- BARRA SUPERIOR -->
   <nav class="navbar bg-primary" data-bs-theme="dark">
     <div class="container">
 
       <!-- Icono de usuario y nombre -->
       <span class="navbar-brand">
         <i class="bi bi-person-circle"></i>
-        [Tu nombre y apellidos]
+        German Galvez Aranda
       </span>
 
-      <!-- Nombre de la tarea -->
       <span class="navbar-text">Tarea 4 · DWEC</span>
     </div>
   </nav>
@@ -48,7 +46,7 @@
       <!-- Título principal -->
       <h1 class="h2 mb-1">Calculadora y bucles</h1>
 
-      <!-- Breve explicación de lo que hace la página -->
+      <!--explicación de lo que hace la página -->
       <p class="lead mb-0 text-body-secondary">
         Una práctica para realizar operaciones matemáticas y trabajar con bucles en JavaScript.
       </p>
@@ -77,13 +75,7 @@
           <!-- Contenido de la tarjeta -->
           <div class="card-body">
 
-            <!-- Etiqueta asociada a la primera casilla -->
             <label for="numero1" class="form-label">Número 1</label>
-
-            <!--
-              Casilla donde se escribe el primer número.
-              NO CAMBIES el id: lo utiliza leerNumero() de ayudas.js.
-            -->
             <input
               type="number"
               id="numero1"
@@ -93,11 +85,6 @@
 
             <!-- Etiqueta asociada a la segunda casilla -->
             <label for="numero2" class="form-label">Número 2</label>
-
-            <!--
-              Casilla donde se escribe el segundo número.
-              NO CAMBIES el id: lo utiliza leerNumero() de ayudas.js.
-            -->
             <input
               type="number"
               id="numero2"
@@ -109,22 +96,17 @@
         </section>
       </div>
 
-      <!-- ZONA DONDE SE MUESTRAN LOS RESULTADOS -->
+      <!-- SE MUESTRAN LOS RESULTADOS -->
       <div class="col-12 col-lg-6">
         <section class="card h-100">
 
           <!-- Título de la tarjeta -->
           <div class="card-header">
-            <i class="bi bi-card-text"></i> Resultado
+            <i class="bi bi-card-text"></i> 
           </div>
 
           <div class="card-body">
 
-            <!--
-              Aquí aparecerán los resultados y los mensajes.
-              mostrar(), anadirLinea() y anadirBadge() utilizan este id.
-              NO CAMBIES el id.
-            -->
             <div id="salida" aria-live="polite">
               <p class="text-body-secondary mb-0">
                 Introduce los números y pulsa un botón para comenzar.
@@ -250,7 +232,6 @@
               Repite un mensaje utilizando tres tipos de bucles.
             </p>
 
-            <!-- Grupo de botones para ejecutar los diferentes bucles -->
             <div class="btn-group flex-wrap" role="group"
                  aria-label="Bucles con texto">
 
