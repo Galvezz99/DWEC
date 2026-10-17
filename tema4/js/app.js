@@ -146,42 +146,49 @@ function cualEsMayor() {
 
 const n1= leerNumero("Numero1");
 const n2= leerNumero("Numero2");
-
+//comprobamos si falta algun numero
 if(Number.isNaN(n1)|| Number.isNaN(n2)){
-        mostrar("Escribe los dos numeros antes de operar","danger");
-        console.warn("Modulo:falta algun numero");
-//caso1
+  //mostramos mnsaje d error
+ mostrar("Escribe los dos numeros antes de operar","danger");
+  //Registramos el error
+  console.warn("Modulo:falta algun numero");
+// Si el primer número es mayor que el segundo.
 }else if(n1>n2){
+    // Mostramos cuál es el número mayor.
     mostrar('${n1}es mayor que ${n2}= ${resultado}',"info");
+    // Registramos la comparación.
     console.log('¿Cual es mayor?:${n1}>${n2}');
-
+  
+  // Si el segundo número es mayor que el primero.
 }else if(n1<n2){
-    //caso 2:el primero es mayor
+    // Mostramos cuál es el número mayor.
     mostrar('${n2}es mayor que ${n1}= ${resultado}',"info");
+    //registramos la comparacion
     console.log('¿cual es mayor?: ${n1} < ${n2}');
 
 } else {
-    // Caso 3: no es ni mayor ni menor, así que son iguales
+  // Si no se cumple ninguna comparación anterior, son iguales.
     mostrar(`${n1} y ${n2} son iguales`, "info");
     console.log(`¿Cuál es mayor?: ${n1} === ${n2}`);
   }
 
-
 }
 
 function parOImpar() {
-  // TODO: solo con el número 1. Usa el operador % y el ternario ( condición ? "par" : "impar" ).
-  // TODO: si el número tiene decimales, avisa de que no es ni par ni impar.
 
   const n1 = leerNumero("numero1");
-
+  // Comprobamos si la casilla está vacía.
   if(Number.isNaN(n1)){
+  //mensaje d error si n hay numero
   mostrar("Escribe un numero.","danger");  
   console.warn("Par o impar:falta el numero");
+// Comprobamos que el número no tenga decimales.
 }else if (!Number.isInteger(n1)){
   mostrar("El numero es ni par ni impar","danger");  
   console.warn("Par o impar:el numero tiene decimales");
   }else{
+    // Si el resto al dividir entre 2 es cero, es par.
+    // Si no, es impar. El ternario elige entre ambas palabras.
     const resultado = n1 % 2 === 0 ? "par": "impar";
 
    mostrar(`${n1} es ${resultado}`, "info");
