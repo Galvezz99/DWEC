@@ -301,12 +301,23 @@ function badgesWhile() {
 
 function badgesDoWhile() {
 
+ const veces = leerNumero("numero1");
+  limpiarSalida();
 
+  if(Number.isNaN(veces) || !Number.isInteger(veces) || veces < 0 || veces > MAXIMO_REPETICIONES){
+      mostrar("Introduce un numero entero que no supere 20","danger");
+      console.warn("Badges do while:numero no valido");
+  }else{
+    let contador=0;
+    
+    do{
+      contador++;
+      const color = contador % 2=== 0 ? "success" : "primary"; 
+      anadirBadge(contador,color);
+    }while(contador < veces);
 
+    anadirLinea(`Total:${contador} ${contador===1 ? "repeticion": "repeticiones"}`);
+    console.log(`Badges while:total de ${contador} repeticiones`);
+  }
 
-
-
-
-
-  
 }
