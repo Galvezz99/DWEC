@@ -20,17 +20,24 @@ const MAXIMO_REPETICIONES = 20;   // para que un bucle no llene la página
 // Ejercicio 1 · Calculadora
 // ============================================================
 
-// El modelo: lee los dos números, comprueba que están y opera
+//funcion para sumar los dos numeros introducidos
 function sumar() {
+  //Leemos el primero numero d su casilla
   const n1 = leerNumero("numero1");
+  //Leemos el segundo numero d su casilla
   const n2 = leerNumero("numero2");
-
+  
+  // Comprobamos si falta alguno de los números.
+  // Number.isNaN() devuelve true si el valor es NaN.
   if (Number.isNaN(n1) || Number.isNaN(n2)) {
     mostrar("Escribe los dos números antes de operar.", "danger");
     console.warn("Sumar: falta algún número");
   } else {
+  // Calculamos la suma y guardamos el resultado.
     const resultado = n1 + n2;
     mostrar(`${n1} + ${n2} = ${resultado}`);
+    
+  // Mostramos la operación también en la consola.
     console.log(`Sumar: ${n1} + ${n2} = ${resultado}`);
   }
 }
@@ -180,7 +187,7 @@ function parOImpar() {
    mostrar(`${n1} es ${resultado}`, "info");
     console.log(`Par o impar: ${n1} es ${resultado}`);
   }
-
+}
 
 // ============================================================
 // Ejercicio 3 · Bucles con texto
