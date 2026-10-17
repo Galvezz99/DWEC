@@ -61,7 +61,7 @@ function restar() {
 function multiplicar() {
   const n1=leerNumero("numero1");
     const n2=leerNumero("numero2");
-     if(Number.isNaN(1)|| Number.isNaN(n2)){
+     if(Number.isNaN(n1)|| Number.isNaN(n2)){
         mostrar("Escribe los dos numeros antes de operar","danger");
         console.warn("Multiplicar:falta algun numero");
      }else{
@@ -78,7 +78,7 @@ function dividir() {
     const n1=leerNumero("numero1");
     const n2=leerNumero("numero2");
 
-     if(Number.isNaN(1)|| Number.isNaN(n2)){
+     if(Number.isNaN(n1)|| Number.isNaN(n2)){
         mostrar("Escribe los dos numeros antes de operar","danger");
         console.warn("Dividir:falta algun numero");
 
@@ -100,7 +100,7 @@ function potencia() {
     const n1=leerNumero("numero1");
     const n2=leerNumero("numero2");
 
-    if(Number.isNaN(1)|| Number.isNaN(n2)){
+    if(Number.isNaN(n1)|| Number.isNaN(n2)){
         mostrar("Escribe los dos numeros antes de operar","danger");
         console.warn("Modulo:falta algun numero");
 
@@ -116,7 +116,7 @@ function modulo() {
  const n1=leerNumero("numero1");
 const n2=leerNumero("numero2");
 
-    if(Number.isNaN(1)|| Number.isNaN(n2)){
+    if(Number.isNaN(n1)|| Number.isNaN(n2)){
         mostrar("Escribe los dos numeros antes de operar","danger");
         console.warn("Modulo:falta algun numero");
 
@@ -140,7 +140,7 @@ function cualEsMayor() {
 const n1= leerNumero("Numero1");
 const n2= leerNumero("Numero2");
 
-if(Number.isNaN(1)|| Number.isNaN(n2)){
+if(Number.isNaN(n1)|| Number.isNaN(n2)){
         mostrar("Escribe los dos numeros antes de operar","danger");
         console.warn("Modulo:falta algun numero");
 //caso1
@@ -177,7 +177,7 @@ function parOImpar() {
   }else{
     const resultado = n1 % 2 === 0 ? "par": "impar";
 
-    mostrar('${n1} es ${resultado}`, "info");
+   mostrar(`${n1} es ${resultado}`, "info");
     console.log(`Par o impar: ${n1} es ${resultado}`);
   }
 
@@ -290,7 +290,7 @@ function badgesWhile() {
     while(contador < veces){
       contador++;
       const color = contador % 2=== 0 ? "success" : "primary"; 
-      anadirBadge(i,color);
+      anadirBadge(contador,color);
     }
 
     anadirLinea(`Total:${contador} ${contador===1 ? "repeticion": "repeticiones"}`);
