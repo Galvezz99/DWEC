@@ -58,11 +58,12 @@ function restar() {
         //si estan los dos,hace mult y lo guarda
         const resultado= n1-n2;
         //muestra la operacion en la pagina
-        mostrar('${n1} -  {$n2}= ${resultado}');
+        mostrar(`${n1} -  {$n2}= ${resultado}`);
         //deja el resultado en consola
-        console.log('Restar:${n1}-${n2}=${resultado}');
+        console.log(`Restar:${n1}-${n2}=${resultado}`);
     }
 
+    
 }
 
 function multiplicar() {
@@ -73,8 +74,8 @@ function multiplicar() {
         console.warn("Multiplicar:falta algun numero");
      }else{
         const resultado= n1*n2;
-        mostrar('${n1} x {$n2}= ${resultado}');
-        console.log('Multiplicar:${n1}*${n2}=${resultado}');
+        mostrar(`${n1} x {$n2}= ${resultado}`);
+        console.log(`Multiplicar:${n1}*${n2}=${resultado}`);
 
      }
 
@@ -95,8 +96,8 @@ function dividir() {
         console.warn("Dividir:division entre 0");
      }else{
         const resultado= n1/n2;
-         mostrar('${n1} / {$n2}= ${resultado}');
-        console.log('Dividir:${n1}/${n2}=${resultado}');
+         mostrar(`${n1} / {$n2}= ${resultado}`);
+        console.log(`Dividir:${n1}/${n2}=${resultado}`);
 
      }
 
@@ -113,8 +114,8 @@ function potencia() {
 
     }else{
         const resultado= n1** n2;
-        mostrar('${n1} ^  {$n2}= ${resultado}');
-        console.log('Potencia:${n1}**${n2}=${resultado}');
+        mostrar(`${n1} ^  {$n2}= ${resultado}`);
+        console.log(`Potencia:${n1}**${n2}=${resultado}`);
 
     }
 }
@@ -129,8 +130,8 @@ const n2=leerNumero("numero2");
 
     }else{
         const resultado= n1% n2;
-        mostrar('${n1} %  {$n2}= ${resultado}');
-        console.log('Modulo:${n1}%${n2}=${resultado}');
+        mostrar(`${n1} %  {$n2}= ${resultado}`);
+        console.log(`Modulo:${n1}%${n2}=${resultado}`);
 
     }
 }
@@ -155,16 +156,16 @@ if(Number.isNaN(n1)|| Number.isNaN(n2)){
 // Si el primer número es mayor que el segundo.
 }else if(n1>n2){
     // Mostramos cuál es el número mayor.
-    mostrar('${n1}es mayor que ${n2}= ${resultado}',"info");
+    mostrar(`${n1}es mayor que ${n2}= ${resultado}`,"info");
     // Registramos la comparación.
     console.log('¿Cual es mayor?:${n1}>${n2}');
   
   // Si el segundo número es mayor que el primero.
 }else if(n1<n2){
     // Mostramos cuál es el número mayor.
-    mostrar('${n2}es mayor que ${n1}= ${resultado}',"info");
+    mostrar(`${n2}es mayor que ${n1}= ${resultado}`,"info");
     //registramos la comparacion
-    console.log('¿cual es mayor?: ${n1} < ${n2}');
+    console.log(`¿cual es mayor?: ${n1} < ${n2}`);
 
 } else {
   // Si no se cumple ninguna comparación anterior, son iguales.
