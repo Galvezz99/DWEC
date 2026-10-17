@@ -165,7 +165,18 @@ if(Number.isNaN(1)|| Number.isNaN(n2)){
 function parOImpar() {
   // TODO: solo con el número 1. Usa el operador % y el ternario ( condición ? "par" : "impar" ).
   // TODO: si el número tiene decimales, avisa de que no es ni par ni impar.
-}
+
+  const n1 = leerNumero("numero1");
+
+  if(Number.isNaN(n1)){
+  mostrar("Escribe un numero.","danger");  
+  console.warn("Par o impar:falta el numero");
+}else if (!Number.isInteger(n1)){
+  mostrar("El numero es ni par ni impar","danger");  
+  console.warn("Par o impar:el numero tiene decimales");
+  }else{
+    
+  }
 
 
 // ============================================================
