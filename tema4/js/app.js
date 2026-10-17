@@ -58,7 +58,7 @@ function restar() {
         //si estan los dos,hace mult y lo guarda
         const resultado= n1-n2;
         //muestra la operacion en la pagina
-        mostrar(`${n1} -  {$n2}= ${resultado}`);
+        mostrar(`${n1} -  ${n2}= ${resultado}`);
         //deja el resultado en consola
         console.log(`Restar:${n1}-${n2}=${resultado}`);
     }
@@ -74,7 +74,7 @@ function multiplicar() {
         console.warn("Multiplicar:falta algun numero");
      }else{
         const resultado= n1*n2;
-        mostrar(`${n1} x {$n2}= ${resultado}`);
+        mostrar(`${n1} x ${n2}= ${resultado}`);
         console.log(`Multiplicar:${n1}*${n2}=${resultado}`);
 
      }
@@ -96,7 +96,7 @@ function dividir() {
         console.warn("Dividir:division entre 0");
      }else{
         const resultado= n1/n2;
-         mostrar(`${n1} / {$n2}= ${resultado}`);
+         mostrar(`${n1} / ${n2}= ${resultado}`);
         console.log(`Dividir:${n1}/${n2}=${resultado}`);
 
      }
@@ -114,7 +114,7 @@ function potencia() {
 
     }else{
         const resultado= n1** n2;
-        mostrar(`${n1} ^  {$n2}= ${resultado}`);
+        mostrar(`${n1} ^  ${n2}= ${resultado}`);
         console.log(`Potencia:${n1}**${n2}=${resultado}`);
 
     }
@@ -130,7 +130,7 @@ const n2=leerNumero("numero2");
 
     }else{
         const resultado= n1% n2;
-        mostrar(`${n1} %  {$n2}= ${resultado}`);
+        mostrar(`${n1} % ${n2}= ${resultado}`);
         console.log(`Modulo:${n1}%${n2}=${resultado}`);
 
     }
