@@ -42,7 +42,7 @@ function restar() {
     const n2=leerNumero("numero2");
 
     //si falta alguno de los 2 numeros,avisa del error 
-    if(Number.isNaN(1)|| Number.isNaN(n2)){
+    if(Number.isNaN(n1)|| Number.isNaN(n2)){
         //muestra el error en la pagina
         mostrar("Escribe los dos numeros antes de operar","danger");
         //deja el aviso en consola
