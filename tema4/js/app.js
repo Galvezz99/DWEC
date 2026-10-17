@@ -194,6 +194,16 @@ function bucleFor() {
   if(Number.isNaN(veces) || !Number.isInteger(veces) || veces < 0 || veces > MAXIMO_REPETICIONES){
       mostrar("Introduce un numero entero entre 0 y 20","danger");
       console.warn("For:numero no valido");
+  }else{
+    let contador=0;
+    
+    for(let i = 1; i <= veces; i++){
+      anadirLinea(`for repeticion ${i} de ${veces}`);
+      contador++;
+    }
+
+    anadirLinea(`Total:${contador} ${contador===1 ? "repeticion": "repeticiones"}`);
+    console.log(`For:total de ${contador} repeticiones`);
   }
 }
 
