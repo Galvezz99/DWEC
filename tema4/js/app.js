@@ -275,6 +275,7 @@ function badgesFor() {
 const veces = leerNumero("numero1");
   limpiarSalida();
 
+  //comprueba q el valor sea un numero entero entre 0 y 20
   if(Number.isNaN(veces) || !Number.isInteger(veces) || veces < 0 || veces > MAXIMO_REPETICIONES){
       mostrar("Introduce un numero entero entre 0 y 20","danger");
       console.warn("Badges for:numero no valido");
