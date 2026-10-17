@@ -175,7 +175,10 @@ function parOImpar() {
   mostrar("El numero es ni par ni impar","danger");  
   console.warn("Par o impar:el numero tiene decimales");
   }else{
-    
+    const resultado = n1 % 2 === 0 ? "par": "impar";
+
+    mostrar('${n1} es ${resultado}`, "info");
+    console.log(`Par o impar: ${n1} es ${resultado}`);
   }
 
 
@@ -188,11 +191,10 @@ function bucleFor() {
   const veces = leerNumero("numero1");
   limpiarSalida();
 
-  // TODO: si el número falta, tiene decimales o pasa de MAXIMO_REPETICIONES, muestra un error en rojo.
-  // TODO: si no, repite con un for tantas veces como diga «veces». En cada vuelta:
-  //         anadirLinea(`for · repetición ${i} de ${veces}`);
-  //       y cuenta las vueltas en una variable contador.
-  // TODO: al terminar, añade una línea con el total: «Total: 5 repeticiones» o «Total: 1 repetición».
+  if(Number.isNaN(veces) || !Number.isInteger(veces) || veces < 0 || veces > MAXIMO_REPETICIONES){
+      mostrar("Introduce un numero entero entre 0 y 20","danger");
+      console.warn("For:numero no valido");
+  }
 }
 
 function bucleWhile() {
