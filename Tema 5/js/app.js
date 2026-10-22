@@ -25,8 +25,15 @@ function aplicarCambios() {
   const primero = document.getElementById("primero");
   primero.textContent = "Texto modificado por JavaScript";
 
+
   // TODO: el segundo párrafo, con querySelector y su clase (.segundo): resáltalo con la clase "bg-warning-subtle".
+  const segundo = document.querySelector(".segundo");
+  segundo.classList.add("bg-warning-subtle");
+
   // TODO: el tercero, con querySelectorAll("#contenido p") y su posición en la lista: ponlo en rojo con "text-danger".
+     const tercero = querySelectorAll("#contenido p");
+    tercero.classList.add("text-danger");
+
   // TODO: un console.log() que diga que se han aplicado los cambios.
 }
 
