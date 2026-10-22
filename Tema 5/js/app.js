@@ -21,20 +21,34 @@ console.log("app.js cargado");
 // ============================================================
 
 function aplicarCambios() {
-  // El modelo: el primer párrafo, por su id
+  // Buscamos el primer párrafo, por su id
   const primero = document.getElementById("primero");
+  //dambia el texto del primer parrafo
   primero.textContent = "Texto modificado por JavaScript";
 
 
   // TODO: el segundo párrafo, con querySelector y su clase (.segundo): resáltalo con la clase "bg-warning-subtle".
+
+      //Buscamos por clase y que ademas se llame segunda
   const segundo = document.querySelector(".segundo");
+  //Añade una clase de boostrap para resaltarlo
   segundo.classList.add("bg-warning-subtle");
 
   // TODO: el tercero, con querySelectorAll("#contenido p") y su posición en la lista: ponlo en rojo con "text-danger".
-     const tercero = querySelectorAll("#contenido p");
-    tercero.classList.add("text-danger");
+
+    //Selecciona todos los párrafos de contenido
+     const tercero = document.querySelectorAll("#contenido p");
+
+     //Añade la clase de texto rojo al tercer parrafo
+    tercero[2].classList.add("text-danger");
 
   // TODO: un console.log() que diga que se han aplicado los cambios.
+
+  //Mensaje x consola
+  console.log("Se han aplicado los cambios");
+
+
+
 }
 
 
