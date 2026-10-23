@@ -171,12 +171,42 @@ function cambiarConHtml() {
 // ============================================================
 
 function anadirTarea() {
-  // TODO: lee el texto de #tareaInput (value + trim). Si está vacío, muestra un mensaje en #error5.
-  // TODO: si no, crea un <li class="list-group-item"> con dos elementos dentro:
-  //         · un <input> de tipo "checkbox" con la clase "form-check-input",
-  //         · un <span> con el texto de la tarea (textContent).
-  //       Cuelga el <li> de #listaTareas y vacía la casilla (value = "").
-  // TODO: actualiza #totalTareas con el número de <li> que hay en la lista.
+
+const entrada=document.querySelector("#tareaInput");
+const texto =entrada.value.trim();
+
+const error=document.querySelector("#error5");
+
+if(texto===""){
+  error.classList.remove("d-none");
+  return
+}
+
+error.classList.add("d-none");
+
+const tarea=document.createElement("li");
+tarea.classList.add("list-group-item");
+
+  
+  const check=document.createElement("input");
+  check.type="checkbox";
+  check.classList.add("form-check-input");
+
+  const textoTarea=document.createElement("span");
+  textoTarea.textContent=texto;
+
+  tarea.append(check,textoTarea);
+
+  const listaTareas=document.querySelector("#listaTareas");
+  listaTareas.append(tarea);
+
+  entrada.value="";
+
+  const totalTareas=document.querySelector("#totalTareas");
+  totalTareas.textContent=listaTareas.children.length;
+
+
+
 }
 
 function borrarCompletadas() {
