@@ -140,14 +140,29 @@ function cambiarTexto() {
 
   primero.textContent=texto;
   error.classList.add("d-none");
-  // TODO: lee lo escrito en #nuevoTexto con value y quítale los espacios de los extremos con trim().
-  // TODO: si está vacío, muestra el error #error4 (quítale "d-none") y no cambies nada.
-  // TODO: si no, pon ese texto en el primer párrafo de #contenido con textContent y oculta el error.
 }
 
 function cambiarConHtml() {
-  // TODO: lo mismo que cambiarTexto(), pero con innerHTML.
-  //       Prueba las dos con <b>hola</b> y explica en el README qué diferencia ves y por qué es peligroso.
+
+      // Leemos el texto y quitamos los espacios de los extremos
+    const texto= document.querySelector("#nuevoTexto").value.trim();
+
+        // Seleccionamos el aviso de error
+    const error=document.querySelector("#error4");
+
+      // Comprobamos si el texto está vacío
+    if(texto===""){
+      //mostramos el aviso
+      error.classList.remove("d-none");
+      return;
+    }
+    //Seleccionamos el primer parrafo
+    const primero=document.querySelector("#contenido p");
+    //cambiamos el contenido interpretando HTML
+    primero.innerHTML=texto;
+    //ocultamos el aviso
+    error.classList.add("d-none");
+
 }
 
 
