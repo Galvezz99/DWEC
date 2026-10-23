@@ -79,6 +79,16 @@ function anadirParrafo() {
 }
 
 function eliminarUltimo() {
+
+  const contenido=document.querySelector("#contenido");
+  const ultimo=contenido.lastElementChild;
+
+  if(ultimo==null){
+    const aviso=document.querySelector("#aviso2");
+    aviso.classList.remove("d-none");
+  }else{
+    ultimo.remove();
+  }
   // TODO: busca el último párrafo de #contenido (lastElementChild).
   // TODO: si es null (ya no queda ninguno), muestra el aviso #aviso2 quitándole la clase "d-none".
   //       Si no, bórralo con remove().
@@ -93,16 +103,20 @@ function activarResaltado() {
   const parrafos = document.querySelectorAll("#contenido p");
 
   for (const parrafo of parrafos) {
-    // addEventListener("mouseenter", ...) ejecuta la función cuando el ratón entra en el párrafo.
-    // Los eventos los veremos a fondo en el tema 9: de momento, copia este modelo.
     parrafo.addEventListener("mouseenter", function () {
       parrafo.classList.add("bg-body-secondary");
     });
 
     // TODO: lo mismo con "mouseleave" (cuando el ratón sale) para quitar la clase.
+
+    parrafo.addEventListener("mouseleave",function(){
+      parrafo.classList.remove("bg-body-secondary");
+    });
   }
 
   // TODO: un console.log() que diga en cuántos párrafos se ha activado (parrafos.length).
+
+  console.log("Resaltado activado en "+ parrafos.length+"parrafos");
 }
 
 
@@ -111,6 +125,21 @@ function activarResaltado() {
 // ============================================================
 
 function cambiarTexto() {
+
+  const texto=document.querySelector("#nuevoTexto").value.trim();
+
+  const error=document.querySelector("#error4");
+
+  if(texto===""){
+
+    error.classList.remove("d-none");
+    return;
+  }
+
+  const primero=document.querySelector("#contenido p");
+
+  primero.textContent=texto;
+  error.classList.add("d-none");
   // TODO: lee lo escrito en #nuevoTexto con value y quítale los espacios de los extremos con trim().
   // TODO: si está vacío, muestra el error #error4 (quítale "d-none") y no cambies nada.
   // TODO: si no, pon ese texto en el primer párrafo de #contenido con textContent y oculta el error.
