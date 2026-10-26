@@ -18,13 +18,13 @@
 
 <img src="capturas/1.png" alt="La página recién cargada con mi nombre en la navbar" width="600">
 
-[Qué se ve: tu nombre y los tres párrafos de partida.]
+[Se trata de una aplicación web interactiva para la asignatura DWEC orientada a practicar la manipulación del DOM, el manejo de eventos y el BOM mediante JavaScript. Permite modificar párrafos, añadir o eliminar nodos dinámicamente, gestionar tareas y consultar las propiedades de la ventana del navegador]
 
 ### b) Ejercicios 1 y 2
 
 <img src="capturas/2.png" alt="Los párrafos después de aplicar los cambios y añadir dos párrafos" width="600">
 
-[Qué ha cambiado en cada párrafo y qué selector has usado para cada uno.]
+Su texto original ha sido reemplazado por; texto modificado por JavaScript
 
 ### c) Ejercicio 3: resaltado al pasar el ratón
 
@@ -32,6 +32,8 @@
 <img src="capturas/3.png" alt="Los párrafos después de aplicar los cambios y añadir dos párrafos" width="600">
 
 [Qué párrafo está resaltado y qué pasa con los párrafos que añades después.]
+
+El parrado resaltado es el segundo,los parrafos se añaden debajo
 
 ### d) Ejercicio 4: `<b>hola</b>` con innerHTML
 
