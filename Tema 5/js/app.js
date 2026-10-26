@@ -204,16 +204,32 @@ tarea.classList.add("list-group-item");
 
   const totalTareas=document.querySelector("#totalTareas");
   totalTareas.textContent=listaTareas.children.length;
-
-
-
 }
 
+
+
 function borrarCompletadas() {
-  // TODO: selecciona las casillas marcadas: document.querySelectorAll("#listaTareas input:checked").
-  // TODO: si no hay ninguna, avisa en #error5. Si hay, recórrelas con for…of y borra el <li> de cada una
-  //       (el <li> es el padre de la casilla: parentElement).
-  // TODO: actualiza #totalTareas.
+  //Casillas marcadas dentro de la lista
+    const marcadas=document.querySelectorAll("#listaTareas input:checked");
+    const error=document.querySelector("#error5");
+
+    //si no hay ninguna, avisa y salimos
+    if(marcadas.length===0){
+      error.classList.remove("d-none");
+      return;
+    }
+
+    //si hay, ocultamos el aviso por si estaba visible
+    error.classList.add("d-none");
+
+    for(const casilla of marcadas){
+      casilla.parentElement.remove();
+    }
+
+    const listaTareas=document.querySelector("#listaTareas");
+    document.querySelector("#totalTareas").textContent=listaTareas.children.length;
+
+
 }
 
 
@@ -227,8 +243,24 @@ function verDatosVentana() {
   const alto = window.innerHeight;
   document.querySelector("#datoVentana").textContent = `${ancho} × ${alto} px`;
 
-  // TODO: con if / else if, el punto de corte de Bootstrap según el ancho: xs (< 576), sm (≥ 576), md (≥ 768),
-  //       lg (≥ 992), xl (≥ 1200) y xxl (≥ 1400). Escríbelo en #datoPunto.
-  // TODO: el tamaño de la pantalla (screen.width y screen.height) en #datoPantalla.
-  // TODO: la URL (location.href) en #datoUrl y el idioma del navegador (navigator.language) en #datoIdioma.
+
+  let punto;
+
+  if(ancho >=1400){
+    punto="xxl";
+  }else if(ancho>=1200){
+    punto="xl";
+  }else if(ancho >=992){
+    punto="lg";
+  }else if(ancho >=768){
+    punto="md";
+  }else if(ancho>=576){
+    punto="sm";
+  }else{
+    punto="xs";
+  }
+
+  document.querySelector("#datoPunto").textContent=punto;
+
+
 }
