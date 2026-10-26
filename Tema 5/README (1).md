@@ -60,9 +60,8 @@ El parrado resaltado es el segundo,los parrafos se añaden debajo
 TextContent trata el contenido como texto plano, mientras que innerHTML interpreta y procesa etiquetas HTML. No se debe usar innerHTML con datos de usuarios por que permite la inyección de codigo malicioso
 
 ## Fuentes
+https://developer.mozilla.org/es/
 
-- [Título de la página](https://enlace-a-la-fuente)
 
 ## Uso de IA
 
-[Si has usado IA: qué herramienta, para qué y qué hiciste después con su respuesta. Si no la has usado, borra este apartado.]
