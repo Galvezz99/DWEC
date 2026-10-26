@@ -1,6 +1,6 @@
 # Tarea 5 · Manipular el DOM
 
-**Autor:** [Tu nombre y apellidos] · Desarrollo Web en Entorno Cliente (DWEC) · 2.º DAW · Curso 2026-27
+**Autor:** German Galvez Aranda· Desarrollo Web en Entorno Cliente (DWEC) · 2.º DAW · Curso 2026-27
 
 > **Plantilla de la tarea 5.** Cómo usarla:
 >
@@ -35,14 +35,14 @@
 
 ### d) Ejercicio 4: `<b>hola</b>` con innerHTML
 
-<img src="capturas/4.png alt="El primer párrafo tras usar innerHTML" width="600">
+<img src="capturas/4.png" alt="El primer párrafo tras usar innerHTML" width="600">
 
 [Qué salía con «Cambiar texto» y qué sale con innerHTML.]
 
 ### e) Ejercicio 5: la lista de tareas
 
 ![La lista con tres tareas y una marcada]
-<img src="capturas/5.png alt="El primer párrafo tras usar innerHTML" width="600">
+<img src="capturas/5.png" alt="El primer párrafo tras usar innerHTML" width="600">
 [Tres tareas, una marcada, antes de pulsar «Borrar completadas».]
 
 ### f) Ejercicio 6: los datos de la ventana en el móvil
@@ -54,6 +54,8 @@
 ## Reflexión
 
 [De 5 a 8 líneas: ¿qué diferencia hay entre textContent e innerHTML y por qué no se debe meter en innerHTML lo que escribe el usuario? Pon como ejemplo lo que pasó con `<b>hola</b>`.]
+
+TextContent trata el contenido como texto plano, mientras que innerHTML interpreta y procesa etiquetas HTML. No se debe usar innerHTML con datos de usuarios por que permite la inyección de codigo malicioso
 
 ## Fuentes
 
