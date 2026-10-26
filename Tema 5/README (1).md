@@ -16,32 +16,33 @@
 
 ### a) La página recién cargada
 
-<img src="capturas/a-pagina.png" alt="La página recién cargada con mi nombre en la navbar" width="600">
+<img src="capturas/1.png" alt="La página recién cargada con mi nombre en la navbar" width="600">
 
 [Qué se ve: tu nombre y los tres párrafos de partida.]
 
 ### b) Ejercicios 1 y 2
 
-<img src="capturas/b-ej1-ej2.png" alt="Los párrafos después de aplicar los cambios y añadir dos párrafos" width="600">
+<img src="capturas/2.png" alt="Los párrafos después de aplicar los cambios y añadir dos párrafos" width="600">
 
 [Qué ha cambiado en cada párrafo y qué selector has usado para cada uno.]
 
 ### c) Ejercicio 3: resaltado al pasar el ratón
 
-![Un párrafo resaltado con el ratón encima](capturas/c-ej3-resaltado.png)
+![Un párrafo resaltado con el ratón encima]
+<img src="capturas/3.png" alt="Los párrafos después de aplicar los cambios y añadir dos párrafos" width="600">
 
 [Qué párrafo está resaltado y qué pasa con los párrafos que añades después.]
 
 ### d) Ejercicio 4: `<b>hola</b>` con innerHTML
 
-<img src="capturas/d-ej4-innerhtml.png" alt="El primer párrafo tras usar innerHTML" width="600">
+<img src="capturas/4.png alt="El primer párrafo tras usar innerHTML" width="600">
 
 [Qué salía con «Cambiar texto» y qué sale con innerHTML.]
 
 ### e) Ejercicio 5: la lista de tareas
 
-![La lista con tres tareas y una marcada](capturas/e-ej5-lista.png)
-
+![La lista con tres tareas y una marcada]
+<img src="capturas/5.png alt="El primer párrafo tras usar innerHTML" width="600">
 [Tres tareas, una marcada, antes de pulsar «Borrar completadas».]
 
 ### f) Ejercicio 6: los datos de la ventana en el móvil
