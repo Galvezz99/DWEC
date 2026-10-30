@@ -201,10 +201,15 @@ function mostrarProductos() {
 }
 
 function ordenarPorPrecio() {
-  // TODO: haz una copia del array con [...productos] y ordénala con sort() de más barato a más caro.
-  //       sort necesita una función de comparación: function (a, b) { return ... }.
-  //       ¿Por qué una copia? Explícalo en el README.
-  // TODO: pinta la copia y escribe en #mensaje3 cómo están ordenados.
+
+  const copia =[...productos];
+
+  copia.sort(function(a,b){
+    return a.precio - b.precio;
+  });
+  pintarProductos(copia);
+
+  document.querySelector("#mensaje3").textContent="Productos ordenador de menor a mayor precio";
 }
 
 function filtrarCaros() {
