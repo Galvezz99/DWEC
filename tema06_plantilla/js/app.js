@@ -135,6 +135,8 @@ function quitarUltimo() {
   console.log("Color eliminado:", eliminado);
 
 }
+
+
 function quitarPrimero() {
   
   if(colores.length===0){
@@ -191,7 +193,11 @@ function pintarProductos(lista) {
 }
 
 function mostrarProductos() {
-  // TODO: pinta todos los productos con pintarProductos() y escribe en #mensaje3 cuántos hay.
+ 
+  pintarProductos(productos);
+
+  document.querySelector("#mensaje3").textContent="Hay" + productos.length + "productos en el catalogo";
+
 }
 
 function ordenarPorPrecio() {
