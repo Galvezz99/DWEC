@@ -404,8 +404,39 @@ function verSuma() {
 }
 
 function verCadena() {
-  // TODO: los tres seguidos: los pares, después sus dobles y al final la suma de esos dobles.
-  //       Escribe en #salida5 una línea por paso.
+
+  const pares=numeros.filter(function(numero){
+    return numero %2===0;
+  });
+
+  const dobles=pares.map(function(numero){
+    return numero *2
+  });
+
+  const suma=dobles.reduce(function(acumulador,numero){
+    return acumulador+numero;
+  }, 0);
+
+  const salida=document.querySelector("#salida5");
+  salida.textContent="";
+
+  const paso1 = document.createElement("p");
+  paso1.textContent = "1. Números pares: " + pares.join(", ");
+
+  const paso2 = document.createElement("p");
+  paso2.textContent = "2. Dobles de los pares: " + dobles.join(", ");
+
+  const paso3 = document.createElement("p");
+  paso3.textContent = "3. Suma de los dobles: " + suma;
+
+  salida.append(paso1);
+  salida.append(paso2);
+  salida.append(paso3);
+
+  console.log("Pares:", pares);
+  console.log("Dobles:", dobles);
+  console.log("Suma:", suma);
+  
 }
 
 
