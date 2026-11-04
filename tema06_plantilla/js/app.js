@@ -339,7 +339,8 @@ function anadirNota() {
 }
 
 function borrarNotas() {
-  // TODO: deja alumno.notas vacío y vuelve a pintar.
+  alumno.notas=[];
+  mostrarNotas();
 }
 
 mostrarNotas();
@@ -352,8 +353,24 @@ mostrarNotas();
 const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function verDobles() {
-  // TODO: con map(), un array nuevo con el doble de cada número.
-  // TODO: escribe en #salida5 el resultado y, debajo, numeros (para que se vea que no ha cambiado).
+const dobles=numeros.map(function(numero){
+  return numero*2;
+});
+
+const salida=document.querySelector("#salida5");
+salida.textContent="";
+
+  const resultado=document.createElement("p");
+  resultado.textContent="Numero duplicados"+dobles.join(", ");
+
+  const original=document.createElement("p");
+  original.textContent="Array original: "+numeros.join(", ");
+
+  salida.append(resultado);
+  salida.append(original);
+
+  console.log("Dobles:", dobles);
+  console.log("Array original:",numeros);
 }
 
 function verPares() {
