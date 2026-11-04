@@ -315,10 +315,27 @@ const lista=document.querySelector("#notas");
 }
 
 function anadirNota() {
-  // TODO: si #nota está vacía, muestra un error en #error4 (quítale "d-none").
-  //       Ojo: Number("") vale 0, así que esta comprobación va antes de convertir.
-  // TODO: convierte el valor con Number() y llama a alumno.anadirNota(). Si devuelve false, muestra el error.
-  // TODO: si ha ido bien, oculta el error, vacía la casilla y llama a mostrarNotas().
+
+  const casilla=document.querySelector("#nota");
+  const error=document.querySelector("#error4");
+
+  if(casilla.value.trim()===""){
+    error.textContent="Debes introducir la nota";
+    error.classList.remove("d-none");
+    return;
+  }
+
+  const nota=Number(casilla.value);
+
+  if(alumno.anadirNota(nota)===false){
+    error.textContent="La nota debe estar entre 0 y 10";
+    error.classList.remove("d-none");
+    return;
+  }
+
+  error.classList.add("d-none");
+  casilla.value="";
+  mostrarNotas();
 }
 
 function borrarNotas() {
