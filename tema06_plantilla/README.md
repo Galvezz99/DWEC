@@ -2,14 +2,6 @@
 
 **Autor:** German Galvez Aranda · Desarrollo Web en Entorno Cliente (DWEC) · 2.º DAW · Curso 2026-27
 
-Esta carpeta contiene una página interactiva para practicar objetos y arrays en JavaScript. La página está organizada en seis ejercicios: ficha de estudiante, colores, catálogo de productos, notas, operaciones con números y búsqueda y modificación de una lista de ciudades. La interfaz está hecha con HTML y Bootstrap; la lógica está en `js/app.js`.
-
-Para abrirla, abre la carpeta en Visual Studio Code y ejecuta `index.html` con la extensión Live Server (Go Live). También puedes abrir el archivo directamente en el navegador. Bootstrap se carga desde un CDN, así que para ver los estilos hace falta conexión a Internet. La consola del navegador (F12) muestra mensajes de las operaciones.
-
-## Capturas
-
-Guarda tus capturas en `capturas/` con estos nombres para que aparezcan aquí.
-
 ### a) La página recién cargada
 
 <img src="capturas/1.PNG" alt="Página inicial de la aplicación" width="600">
