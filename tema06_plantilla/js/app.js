@@ -491,10 +491,23 @@ function hacerSplice() {
     console.log("No se puede realizar splice. Faltan ciudades");
     return;
   }
-
+s
 const eliminadas=ciudades.splice(2, 2);
-const mensaje=document.createElement("p") 
+const mensaje=document.createElement("p");
+mensaje.textContent="Ciudades eliminadas: " + eliminadas.join(", ");
 
+
+const cantidad=document.createElement("p");
+cantidad.textContent="Ciudades restantes: " + ciudades.length;
+
+salida.append(mensaje);
+salida.append(cantidad);
+
+  mostrarCiudades();
+  
+ console.log("Ciudades eliminadas:", eliminadas);
+console.log("Array actual:", ciudades);
+  
   
 }
 
