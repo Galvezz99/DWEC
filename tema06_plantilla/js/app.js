@@ -483,8 +483,19 @@ function verSlice() {
 }
 
 function hacerSplice() {
-  // TODO: si quedan menos de 3 ciudades, avisa en #salida6 de que hay que restaurar y no hagas nada más.
-  // TODO: si no, ciudades.splice(2, 2): escribe en #salida6 qué devuelve y cuántas quedan, y vuelve a pintar.
+ const salida=document.querySelector("#salida6");
+  salida.textContent="";
+
+  if(ciudades.length < 3){
+    salida.textContent="Hay menos de 3 ciudades. Debes restaurar el array.";
+    console.log("No se puede realizar splice. Faltan ciudades");
+    return;
+  }
+
+const eliminadas=ciudades.splice(2, 2);
+const mensaje=document.createElement("p") 
+
+  
 }
 
 function restaurarCiudades() {
