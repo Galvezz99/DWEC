@@ -1,64 +1,70 @@
 # Tarea 6 · Objetos y arrays
 
-**Autor:** [Tu nombre y apellidos] · Desarrollo Web en Entorno Cliente (DWEC) · 2.º DAW · Curso 2026-27
+**Autor:** German Galvez Aranda · Desarrollo Web en Entorno Cliente (DWEC) · 2.º DAW · Curso 2026-27
 
-> **Plantilla de la tarea 6.** Cómo usarla:
->
-> 1. Copia esta carpeta en tu repositorio de DWEC y cámbiale el nombre a `tema06`.
-> 2. `index.html` ya está maquetado: seis tarjetas, una por ejercicio. No cambies los `id` ni el `onclick` de los botones.
-> 3. `js/app.js` trae una función por botón con `TODO`. Ya están hechas `comoTexto()`, `pintarProductos()` y casi todo el ejercicio 2: úsalas de modelo.
-> 4. Todas las funciones con `function`: en esta tarea, sin funciones flecha.
-> 5. Sustituye las imágenes de `capturas/` por las tuyas, **con el mismo nombre**.
-> 6. Todo lo que va entre [corchetes] es un hueco: cámbialo por lo tuyo. Al terminar, borra este aviso.
+Esta carpeta contiene una página interactiva para practicar objetos y arrays en JavaScript. La página está organizada en seis ejercicios: ficha de estudiante, colores, catálogo de productos, notas, operaciones con números y búsqueda y modificación de una lista de ciudades. La interfaz está hecha con HTML y Bootstrap; la lógica está en `js/app.js`.
 
-[Una o dos líneas: qué hay en esta carpeta y cómo se ve. Por ejemplo: abrir la carpeta en VS Code, pulsar **Go Live** y probar los botones con la consola abierta (F12).]
+Para abrirla, abre la carpeta en Visual Studio Code y ejecuta `index.html` con la extensión Live Server (Go Live). También puedes abrir el archivo directamente en el navegador. Bootstrap se carga desde un CDN, así que para ver los estilos hace falta conexión a Internet. La consola del navegador (F12) muestra mensajes de las operaciones.
 
 ## Capturas
 
+Guarda tus capturas en `capturas/` con estos nombres para que aparezcan aquí.
+
 ### a) La página recién cargada
 
-<img src="capturas/a-pagina.png" alt="La página recién cargada con mi nombre en la navbar" width="600">
+<img src="capturas/1.PNG" alt="Página inicial de la aplicación" width="600">
 
-[Qué se ve nada más cargar: tu nombre, los colores, la tabla de productos y las ciudades.]
+Se ve la cabecera de la tarea y las seis tarjetas. Al cargar, aparecen los colores iniciales, los seis productos del catálogo y la lista de ciudades.
 
 ### b) Ejercicios 1 y 2: la ficha y los colores
 
-<img src="capturas/b-ej1-ej2.png" alt="La ficha de estudiante y la lista de colores" width="600">
+<img src="capturas/2.PNG" alt="Ficha de estudiante y operaciones con colores" width="600">
 
-[La ficha después de cumplir años y la lista de colores después de añadir y quitar alguno. Qué método has usado para cada cosa.]
+La ficha representa al estudiante mediante un objeto con nombre, apellidos, edad y curso. Sus botones permiten mostrar los datos, aumentar la edad y quitar la propiedad del curso. En la lista de colores, `push()` añade un color al final, `pop()` quita el último y `shift()` quita el primero.
 
 ### c) Ejercicio 3: el catálogo ordenado por precio
 
-![La tabla de productos ordenada por precio](capturas/c-ej3-ordenado.png)
+![Catálogo de productos ordenado por precio]
 
-[Cómo es tu función de comparación y por qué ordenas una copia.]
+<img src="capturas/3.PNG" alt="Ficha de estudiante y operaciones con colores" width="600">
+
+El catálogo contiene seis productos con nombre, categoría y precio. Para ordenarlos de menor a mayor, la función de comparación resta `a.precio - b.precio`. Antes de llamar a `sort()`, se crea una copia con `[...productos]`, porque `sort()` modifica el array sobre el que se ejecuta y así se conserva el catálogo original.
 
 ### d) Ejercicio 4: las notas y la media
 
-![Las notas con su color y la media](capturas/d-ej4-notas.png)
+![Notas con su color y la media](capturas/d-ej4-notas.png)
 
-[Cinco notas como mínimo, aprobadas y suspensas, con su media.]
+<img src="capturas/4.PNG" alt="Ficha de estudiante y operaciones con colores" width="600">
+
+
+Se pueden añadir notas entre 0 y 10. Las notas de 5 o más se muestran en verde y las inferiores a 5, en rojo. La media se calcula sumando las notas con `reduce()` y dividiendo el total entre el número de notas.
 
 ### e) Ejercicio 5: los tres métodos seguidos
 
-![El resultado de filter, map y reduce encadenados](capturas/e-ej5-cadena.png)
+![Resultado de filter, map y reduce encadenados]
+<img src="capturas/5.PNG" alt="Ficha de estudiante y operaciones con colores" width="600">
 
-[Qué hace cada paso y qué número sale al final.]
+
+Partiendo de los números del 1 al 10, `filter()` selecciona los pares (2, 4, 6, 8 y 10), `map()` duplica cada uno (4, 8, 12, 16 y 20) y `reduce()` suma los resultados. La suma final es **60**.
 
 ### f) Ejercicio 6: después de splice y de buscar una ciudad
 
-![Las ciudades después de splice y una búsqueda](capturas/f-ej6-splice.png)
+![Ciudades después de splice y resultado de una búsqueda](capturas/f-ej6-splice.png)
 
-[Qué ciudades ha quitado splice, en qué posición ha quedado la que has buscado y por qué.]
+`splice(2, 2)` elimina dos elementos desde el índice 2: Málaga y Córdoba. Después, Jaén queda en el índice 2 (los arrays empiezan en el índice 0). La búsqueda comprueba si el nombre exacto está en el array y muestra su posición; si no existe, `indexOf()` devuelve `-1`.
 
 ## Reflexión
 
-[De 5 a 8 líneas: ¿qué métodos de los que has usado cambian el array original y cuáles devuelven uno nuevo? Pon como ejemplo lo que pasa en el ejercicio 6 con slice y con splice, y explica por qué en el ejercicio 3 ordenas una copia.]
+Los métodos `push()`, `pop()` y `shift()` cambian el array de colores original al añadir o quitar elementos.
+`sort()` también modifica el array sobre el que trabaja; por eso, en el ejercicio 3 primero ordeno una copia de `productos`.
+En el ejercicio 6, `slice(2, 5)` devuelve una sección nueva y deja intacto el array de ciudades.
+En cambio, `splice(2, 2)` elimina elementos del propio array y devuelve los elementos que ha quitado.
+`map()` y `filter()` crean arrays nuevos, mientras que `reduce()` devuelve un único resultado, como la suma o la media.
+Esta diferencia permite elegir entre conservar los datos iniciales o modificarlos según lo que necesite cada operación.
 
 ## Fuentes
 
-- [Título de la página](https://enlace-a-la-fuente)
+- [Array — JavaScript | MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array): métodos de arrays y cuáles modifican el array original.
+- [Get started with Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/): inclusión de Bootstrap mediante CDN.
 
-## Uso de IA
 
-[Si has usado IA: qué herramienta, para qué y qué hiciste después con su respuesta. Si no la has usado, borra este apartado.]
