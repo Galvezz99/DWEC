@@ -24,7 +24,7 @@ El catálogo contiene seis productos con nombre, categoría y precio. Para orden
 
 ### d) Ejercicio 4: las notas y la media
 
-![Notas con su color y la media](capturas/d-ej4-notas.png)
+![Notas con su color y la media]
 
 <img src="capturas/4.PNG" alt="Ficha de estudiante y operaciones con colores" width="600">
 
