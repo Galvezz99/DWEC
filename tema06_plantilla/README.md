@@ -41,7 +41,8 @@ Partiendo de los números del 1 al 10, `filter()` selecciona los pares (2, 4, 6,
 
 ### f) Ejercicio 6: después de splice y de buscar una ciudad
 
-![Ciudades después de splice y resultado de una búsqueda](capturas/f-ej6-splice.png)
+![Ciudades después de splice y resultado de una búsqueda]
+<img src="capturas/6.PNG" alt="Ficha de estudiante y operaciones con colores" width="600">
 
 `splice(2, 2)` elimina dos elementos desde el índice 2: Málaga y Córdoba. Después, Jaén queda en el índice 2 (los arrays empiezan en el índice 0). La búsqueda comprueba si el nombre exacto está en el array y muestra su posición; si no existe, `indexOf()` devuelve `-1`.
 
