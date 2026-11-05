@@ -259,7 +259,7 @@ const alumno = {
   nombre: "[Garveh]",
   notas: [],
     anadirNota:function(nota){
-      if(Number.isNan(nota) || nota < 0 || nota > 10){
+      if(Number.isNaN(nota) || nota < 0 || nota > 10){
         return false;
       }
 
@@ -289,7 +289,7 @@ const lista=document.querySelector("#notas");
   lista.textContent="";
 
   alumno.notas.forEach(function(nota){
-    const badge=document.createEelement("span");
+    const badge=document.createElement("span");
 
     badge.classList.add("badge");
 
