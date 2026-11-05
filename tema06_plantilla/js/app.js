@@ -522,8 +522,33 @@ ciudades=[...ciudadesOriginal];
 }
 
 function buscarCiudad() {
-  // TODO: lee #buscarCiudad (value y trim). Si está vacío, avisa.
-  // TODO: escribe en #salida6 lo que dan includes() e indexOf() con ese nombre. Si no está, indexOf da -1.
-}
+  const casilla=document.querySelector("#buscarCiudad");
+  const nombre=casilla.value.trim();
 
+  const salida=document.querySelector("#salida6");
+  salida.textContent="";
+
+  if(nombre=== ""){
+    salida.textContent="Escribe el nombre de una ciudad";
+    return;
+  }
+
+  const existe = ciudades.includes(nombre);
+  const posicion = ciudades.indexOf(nombre);
+
+  const resultado = document.createElement("p");
+  resultado.textContent = "¿Existe la ciudad? " + existe;
+
+  const indice = document.createElement("p");
+  indice.textContent = "Posición de la ciudad: " + posicion;
+
+  salida.append(resultado);
+  salida.append(indice);
+
+  console.log("Ciudad buscada:", nombre);
+  console.log("¿Existe?:", existe);
+  console.log("Posición:", posicion);
+
+  
+}
 mostrarCiudades();
