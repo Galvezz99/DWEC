@@ -512,7 +512,13 @@ console.log("Array actual:", ciudades);
 }
 
 function restaurarCiudades() {
-  // TODO: vuelve a copiar ciudadesOriginal en ciudades y pinta.
+ciudades=[...ciudadesOriginal];
+  mostrarCiudades();
+
+  document.querySelector("#salida6").textContent="Se ha restaurado el array original de ciudades";
+
+  console.log("Ciudades restauradas:",ciudades);
+
 }
 
 function buscarCiudad() {
