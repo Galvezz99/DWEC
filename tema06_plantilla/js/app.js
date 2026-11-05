@@ -276,7 +276,7 @@ const alumno = {
     return total+nota;
   },0);
   
-    return / this.notas.length;    
+    return suma / this.notas.length;    
   }
 
   
