@@ -277,12 +277,15 @@ const veces = leerNumero("numero1");
 
   //comprueba q el valor sea un numero entero entre 0 y 20
   if(Number.isNaN(veces) || !Number.isInteger(veces) || veces < 0 || veces > MAXIMO_REPETICIONES){
+          // Muestra un aviso en la página y otro en la consola si el valor no es válido.
       mostrar("Introduce un numero entero entre 0 y 20","danger");
       console.warn("Badges for:numero no valido");
   }else{
     let contador=0;
+        // Repite el bloque desde 1 hasta el número indicado, incluidos ambos.
     for(let i=1;i<=veces;i++){
       const color = i % 2=== 0 ? "success" : "primary"; 
+      // Añade a la página un badge con el número y el color elegidos.
       anadirBadge(i,color);
       contador++;
     }
