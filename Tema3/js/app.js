@@ -1,7 +1,7 @@
 /*
   Tarea 3 · DWEC · German Galvez Aranda
-  Variables, tipos y conversiones.
-
+  Variables, tipos y cdonversiones.
+*/
 console.log("app.js cargado: pulsa «Ejecutar» en cada ejercicio");
 
 
