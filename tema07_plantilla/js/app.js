@@ -76,10 +76,21 @@ function mostrarPrecio() {
     return;
   }
 
+  const precioSinIva=base - (base * descuento / 100);
+  const precioFinal=descuentoVacio
+  ? calcularPrecio(base, iva)
+  : calcularPrecio(base, iva, descuento);
 
+  error.classList.add("d-none");
 
+  pintarLista("#salida1",[
+    `Precio sin IVA: ${formatearEuros(precioSinIva)}`,
+    `Descuento: $ {descuento} %`,
+    `IVA: ${iva}%`,
+    `Precio final: ${formatearEuros(precioFinal)}`
+  ]);
 
-
+  console.log("Ejercicio 1: precio final ->", precioFinal);
 }
 
 
