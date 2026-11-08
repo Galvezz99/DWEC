@@ -219,7 +219,12 @@ function verDobles() {
 }
 
 function verCuadrados() {
-  // TODO: como verDobles(), con el cuadrado de cada número (n ** 2).
+ 
+  console.log("verCuadrados ejecutada");
+
+  const cuadrados=transformar(numeros, (n)=> n **2);
+
+  pintarLista("#salida3",cuadrados);
 }
 
 function verAbsolutos() {
