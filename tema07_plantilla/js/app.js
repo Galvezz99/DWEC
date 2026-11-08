@@ -153,10 +153,20 @@ function verDuracionTotal() {
 }
 
 function buscarAntigua() {
-  // TODO: el callback nuevo, ya con flecha: con find(), la primera película anterior a 1990.
-  // TODO: find devuelve undefined si no hay ninguna: dilo en #mensaje2 y vacía la lista.
-  //       Si la encuentra, píntala con pintarLista("#salida2", [comoTexto(antigua)]).
-}
+  const antigua=peliculas.find(p => p.año < 1990);
+
+  const mensaje2=document.getElementById("mensaje2");
+  const salida2=document.getElementById("salida2");
+
+  if(antigua===undefined){
+    mensaje2.textContent="No se encontro ninguna pelicula anterior a 1990";
+    salida2.replaceChildren();
+  }else{
+      mensaje2.textContent="";
+      pintarLista("#salida2",[comoTexto(antigua)]);
+    }
+  }
+
 
 
 // ============================================================
