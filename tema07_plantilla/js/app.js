@@ -270,7 +270,14 @@ function sumarUno() {
 }
 
 function sumarCinco() {
-  // TODO: lo mismo con contarDeCinco y #cuenta5.
+
+  console.log("sumar cinco ejecutada");
+
+  //Llamamos a la funcion closure que cuenta de 5 en 5
+  const resultado=contarDeCinco();
+
+  // Pintamos el resultado en el elemento con id "cuenta5"
+  document.getElementById("cuenta5").textContent=resultado;
 }
 
 
