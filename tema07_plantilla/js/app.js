@@ -248,6 +248,15 @@ pintarLista("#salida-absolutos", absolutos);
 //       paso vale 1 por defecto.
 function crearContador(paso) {
 
+  console.log("Crear contador ejecutada con paso:",paso);
+
+  let cuenta=0;
+
+  return function(){
+    cuenta+=paso;
+    return cuenta;
+  };
+
 }
 
 const contarDeUno = crearContador();
