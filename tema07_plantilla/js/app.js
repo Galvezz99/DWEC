@@ -406,6 +406,48 @@ function crearAlumno() {
 
   console.log("CrearAlumno ejecutada");
 
+  //Leer valores del form
+
+  const nombre=document.getElementById("nombre5").value.trim();
+  const curso=document.getElementById("curso5").value.trim();
+  const empresa=document.getElementById("empresa5").value.trim();
+  const notasTexto=document.getElementById("notas5").value.trim();
+  const error5=document.getElementById("error5");
+
+  //Si el nombre está vacio,mostrar errir y detenemos
+
+  if(nombre===""){
+    error5.textContent="El nombre no puede estar vacio";
+    return;
+  }
+
+  //Procesar las notas si el campo no esta vacio
+
+  let notasArray=[];
+  if(notasTexto!==""){
+  // Separar por comas y convertir a número (flecha de una sola expresión)
+    notasArray=notasTexto.split(",").map((texto)=> Number(texto.trim()));
+
+    // Validar con some: si alguna nota es NaN o está fuera del rango 0-10
+
+    const hayNotasInvalidas=notasArray.some(
+      (nota)=> Number.isNaN(nota) || nota < 0 || nota > 10
+    );
+ 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 pintarAlumnos();
