@@ -326,13 +326,39 @@ class Alumno {
 
 class AlumnoFCT extends Alumno {
   // TODO: constructor(nombre, curso, empresa): primero super(nombre, curso) y después guarda la empresa.
+    constructor(nombre,curso,empresa){
+      console.log("constructor AlumnadoFCT EJECUTADO");
+      super(nombre,curso);
+      this.empresa=empresa;
+    }
+
   // TODO: presentarse(): la frase de Alumno (super.presentarse()) más «, en prácticas en TecnoSur».
+    presentarse(){
+      console.log("Presentarse Alumnado FCT ejecutado");
+      return super.presentarse() + `, en practicas en ${this.empresa}`;
+    }
 }
 
 const alumnos = [];
 
-// TODO: cuando tengas las clases, crea aquí dos alumnos de partida y añádelos a alumnos con push:
-//       un Alumno con dos notas y un AlumnoFCT con otras dos.
+
+//Crear un alumno normal y añadirle dos notas validas
+
+const alumno1=new Alumno("Lucia Martin", "2ºDAW");
+alumno1.anadirNota(8.5);
+alumno1.anadirNota(9.0);
+alumnos.push(alumno1);
+
+//AlumnoFCT con empresa y añadirle notas validas
+
+const alumno2=new AlumnoFCT("Carlos Ruiz","2ºDAW","Tecno sur");
+alumno2.anadirNota(7.0);
+alumno2.anadirNota(6.5);
+alumno2.push(alumno2);
+
+
+
+
 
 // Ya está hecha: pinta una tarjeta por alumno en #listaAlumnos y actualiza #totalAlumnos
 function pintarAlumnos() {
@@ -377,11 +403,9 @@ function pintarAlumnos() {
 }
 
 function crearAlumno() {
-  // TODO: lee #nombre5, #curso5, #empresa5 y #notas5 (value y trim). Si el nombre está vacío, error en #error5.
-  // TODO: si la empresa está vacía, crea un Alumno con new; si no, un AlumnoFCT.
-  // TODO: si hay notas, sepáralas con split(",") y conviértelas con map((texto) => Number(texto.trim())).
-  //       Si alguna no es válida (some), error en #error5 y no sigas. Si todas lo son, añádelas con anadirNota().
-  // TODO: añade el alumno a alumnos, oculta el error, vacía las casillas y llama a pintarAlumnos().
+
+  console.log("CrearAlumno ejecutada");
+
 }
 
 pintarAlumnos();
