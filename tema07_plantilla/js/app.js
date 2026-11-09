@@ -292,11 +292,36 @@ class Alumno {
     this.notas = [];
   }
 
-  // TODO: anadirNota(nota): si la nota no es un número (Number.isNaN) o no está entre 0 y 10, devuelve false;
-  //       si es válida, la añade a this.notas y devuelve true.
-  // TODO: media(): 0 si no hay notas; si hay, la suma con reduce (con flecha) entre el número de notas.
-  // TODO: presentarse(): devuelve «Lucía Martín, de 2.º DAW».
-  //       Recuerda: en una clase, los métodos van sin function y sin comas entre ellos.
+
+  anadirNota(nota){
+    console.log("anadir nota ejecutada con nota:",nota);
+
+      // Validamos que sea un número real
+      if(typeof nota !== 'number' || Number.isNan(nota) || nota < 0 || nota >10){
+        return false;
+      }
+
+      this.notas.push(nota);
+      return true;
+  }
+
+  media(){
+    console.log("media ejecutada");
+
+    if(this.notas.length===0){
+      return 0;
+    }
+
+    const suma=this.notas.reduce((acumulador,notaActual)=> acumulador + notaActual,0);
+
+    return suma / this.notas.length;
+  }
+
+
+  presentarse(){
+    console.log("Presentarse ejecutada");
+    return `${this.nombre}, de ${this.curso}`;
+  }
 }
 
 class AlumnoFCT extends Alumno {
