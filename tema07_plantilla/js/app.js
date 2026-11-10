@@ -451,7 +451,7 @@ function crearAlumno() {
 }
 
 pintarAlumnos();
-P
+
 
 // ============================================================
 // Ejercicio 6 · Fechas y textos
@@ -501,6 +501,11 @@ function mostrarDias() {
 //       map (la primera letra de cada palabra, en mayúscula) y join("").
 function iniciales(nombreCompleto) {
 
+  console.log("iniciales ejecutada con:", nombreCompleto);
+
+  return nombreCompleto.trim().split(" ").filter(palabra=> palabra!=="") //elimina cadenas vacias por espacios.
+  .map(palabra=>palabra[0].toUpperCase()) //Coge la 1 letra y la pone en mayusculas 
+  .join("");
 }
 
 // TODO: crearUsuario(nombreCompleto) devuelve las iniciales en minúsculas y tres cifras al azar, de 000 a 999:
