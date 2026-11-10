@@ -492,8 +492,27 @@ function mostrarDias() {
   const [anio, mes, dia] = valor.split("-").map(Number);
   const fecha = new Date(anio, mes - 1, dia);
 
-  // TODO: con diasHasta(fecha), escribe en #salida6a «Faltan N días: será viernes, 25 de diciembre de 2026.»,
-  //       «Es hoy…» o «Fue hace N días…». El nombre de la fecha, con toLocaleDateString("es-ES", {…}).
+  //Calculamos los dias
+  const dias=diasHasta(fecha);
+
+  //Formateamos la fecha en español
+  const fechaFormateada=fecha.toLocaleDateString("es-ES",{
+    weekday:"long",
+    day:"numeric",
+    month:"long",
+    year:"numeric",
+  });
+
+  //Escribimos el mensaje segun el resultado
+
+  if(dias>0){
+    salida.textContent=`Faltan ${dias} dias:sera ${fechaFormateada}`;
+  }else if(dias===0){
+    salida.textContent=`Es hoy:${fechaFormateada}`;
+  }else{
+    salida.textContent=`Fue hace ${Math.abs(dias)} dias:fue ${fechaFormateada}`;
+  }
+
 }
 
 // TODO: iniciales(nombreCompleto) devuelve las iniciales en mayúsculas: «lucía martín ortega» → «LMO».
