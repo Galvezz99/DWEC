@@ -131,18 +131,15 @@ function verLargas() {
 }
 
 function ordenarPorAnio() {
-  const ordenadas = [...peliculas].sort(function (a, b) {   // una copia: sort cambia el original
-    return a.anio - b.anio;
-  });
+  const ordenadas = [...peliculas].sort((a, b)=> a.anio - b);   
+
   pintarLista("#salida2", ordenadas.map(comoTexto));
   document.querySelector("#mensaje2").textContent = "De la más antigua a la más reciente.";
   console.log("Ejercicio 2: sort →", ordenadas);
 }
 
 function verDuracionTotal() {
-  const minutos = peliculas.reduce(function (total, pelicula) {
-    return total + pelicula.duracion;
-  }, 0);
+  const minutos = peliculas.reduce((total, pelicula)=>total+pelicula.duracion, 0);
   pintarLista("#salida2", [`${minutos} minutos de películas`]);
   document.querySelector("#mensaje2").textContent = "La suma de las seis duraciones.";
   console.log("Ejercicio 2: reduce →", minutos);
@@ -220,16 +217,17 @@ function verCuadrados() {
 
   const cuadrados=transformar(numeros, (n)=> n **2);
 
-  pintarLista("#salida3",cuadrados);
+  mostrar3("Cuadrados",resultado,numeros.map((n) => n**2));
+  console.log("Ejercicio 3:cuadrados ->", resultado);
 }
 
 function verAbsolutos() {
 
 console.log("verAbsolutos ejecutada");
 
-const absolutos=transformar(numeros, Math.abs);
-
-pintarLista("#salida-absolutos", absolutos);
+const resultado=transformar(numeros, Math.abs);
+  mostrar3("absolutos",resultado,numeros.map(Math.abs));
+console.log("Ejercicio 3: absolutos ->", resultado);
 
 
 }
@@ -423,21 +421,34 @@ function crearAlumno() {
       (nota)=> Number.isNaN(nota) || nota < 0 || nota > 10
     );
  
+    if (hayNotasInvalidas) {
+      error5.textContent = "Alguna nota no es válida (debe ser un número entre 0 y 10).";
+      return;
+    }
   }
 
+  // Crear el alumno correcto
+  const nuevoAlumno = empresa === "" 
+    ? new Alumno(nombre, curso) 
+    : new AlumnoFCT(nombre, curso, empresa);
 
+  // Añadir las notas
+  for (const nota of notasArray) {
+    nuevoAlumno.anadirNota(nota);
+  }
 
-
-
-
-
-
-
-
-
-
-
+  // Guardar, limpiar formulario y pintar
+  alumnos.push(nuevoAlumno);
+  error5.textContent = "";
+  
+  document.getElementById("nombre5").value = "";
+  document.getElementById("curso5").value = "";
+  document.getElementById("empresa5").value = "";
+  document.getElementById("notas5").value = "";
+  
+  pintarAlumnos();
 }
+
 
 pintarAlumnos();
 
@@ -458,7 +469,7 @@ function diasHasta(fecha) {
   history.setHours(0,0,0,0);
 
   const fehcaObjetivo=new Date(fecha);
-  fechaObjetivo.setHours(0,0,0,0);
+  fechaObjetivo.setHours(0, 0, 0, 0);
   //Restamos las fechas
   const diferenciaMs=fechaObjetivo-hoy;
   const msPorDia=1000*60*60*24;
