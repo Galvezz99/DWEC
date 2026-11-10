@@ -17,25 +17,30 @@
 
 ### a) La página recién cargada
 
-<img src="capturas/a-pagina.png" alt="La página recién cargada con mi nombre en la navbar" width="600">
+<img src="capturas/1.png" alt="La página recién cargada con mi nombre en la navbar" width="600">
 
 Se observa la página recién cargada con mi nombre en la barra de navegación y el pie de página con los diferentes ejercicios a mostrar
 
 ### b) Ejercicios 1 y 2: el precio y las películas
 
-<img src="capturas/b-ej1-ej2.png" alt="El desglose del precio y una lista de películas" width="600">
+<img src="capturas/2.png" alt="El desglose del precio y una lista de películas" width="600">
 
 Se muestra el cálculo de un precio con una base de 100, un IVA del 21% y un descuento del 10%, dando un precio final de 94.50 €. La función `calcularPrecio()` realiza solo la lógica matemática con parámetros por defecto, mientras que `mostrarPrecio()` se encarga de leer el DOM, validar los datos y pintar el resultado. A la derecha, se ve el listado de películas filtradas por duración usando un callback con flecha
 
 ### c) Ejercicios 3 y 4: tu callback y los contadores
 
-![El resultado de transformar y los dos contadores](capturas/c-ej3-ej4.png)
+![El resultado de transformar y los dos contadores]
+
+<img src="capturas/3.png" alt="El desglose del precio y una lista de películas" width="600">
+
 
 [Qué hace transformar() por dentro y por qué cada contador lleva su propia cuenta.]
 
 ### d) Ejercicio 5: los alumnos
 
-![Las tarjetas de los alumnos](capturas/d-ej5-clases.png)
+![Las tarjetas de los alumnos]
+
+<img src="capturas/4.png" alt="El desglose del precio y una lista de películas" width="600">
 
 [Al menos cuatro alumnos, alguno en prácticas. Cómo decide tu código si crea un Alumno o un AlumnoFCT.]
 
