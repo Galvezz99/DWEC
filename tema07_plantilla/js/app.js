@@ -456,20 +456,22 @@ function diasHasta(fecha) {
   //obtnemos la fecha d hoy y la pnemos a media noche
   const hot=new Date();
   history.setHours(0,0,0,0);
-  //Restamos las fechas
-  const diferenciaMs=fechaObjetivo-history;
 
+  const fehcaObjetivo=new Date(fecha);
+  fechaObjetivo.setHours(0,0,0,0);
+  //Restamos las fechas
+  const diferenciaMs=fechaObjetivo-hoy;
   const msPorDia=1000*60*60*24;
 
   //dividimos y redondeamos con math.round
 
-  const dias=Math.round(diferenciaMs/msPorDia);
-  return dias;
+  return Math.round(diferenciaMs/msPorDia);
+
  
 }
 
 function mostrarDias() {
-  const valor = document.querySelector("#fecha6").value;        // "2026-12-25", o "" si está vacía
+  const valor = document.querySelector("#fecha6").value;
   const salida = document.querySelector("#salida6a");
 
   if (valor === "") {
@@ -495,9 +497,9 @@ function mostrarDias() {
   //Escribimos el mensaje segun el resultado
 
   if(dias>0){
-    salida.textContent=`Faltan ${dias} dias:sera ${fechaFormateada}`;
+    salida.textContent=`Faltan ${dias} dias: sera ${fechaFormateada}`;
   }else if(dias===0){
-    salida.textContent=`Es hoy:${fechaFormateada}`;
+    salida.textContent=`Es hoy: ${fechaFormateada}`;
   }else{
     salida.textContent=`Fue hace ${Math.abs(dias)} dias:fue ${fechaFormateada}`;
   }
