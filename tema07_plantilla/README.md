@@ -19,13 +19,13 @@
 
 <img src="capturas/a-pagina.png" alt="La página recién cargada con mi nombre en la navbar" width="600">
 
-[Qué se ve nada más cargar: tu nombre y los dos alumnos de partida.]
+Se observa la página recién cargada con mi nombre en la barra de navegación y el pie de página con los diferentes ejercicios a mostrar
 
 ### b) Ejercicios 1 y 2: el precio y las películas
 
 <img src="capturas/b-ej1-ej2.png" alt="El desglose del precio y una lista de películas" width="600">
 
-[Un precio con descuento y uno de los botones de las películas. Qué hace calcularPrecio() y qué hace mostrarPrecio().]
+Se muestra el cálculo de un precio con una base de 100, un IVA del 21% y un descuento del 10%, dando un precio final de 94.50 €. La función `calcularPrecio()` realiza solo la lógica matemática con parámetros por defecto, mientras que `mostrarPrecio()` se encarga de leer el DOM, validar los datos y pintar el resultado. A la derecha, se ve el listado de películas filtradas por duración usando un callback con flecha
 
 ### c) Ejercicios 3 y 4: tu callback y los contadores
 
