@@ -46,8 +46,7 @@ Se muestra el cálculo de un precio con una base de 100, un IVA del 21% y un des
 
 ### e) Ejercicio 6: fechas y textos
 
-![Los días que faltan para una fecha y unas iniciales](capturas/e-ej6-fechas-textos.png)
-
+![Los días que faltan para una fecha y unas iniciales]
 [Qué fecha has probado, cuántos días salen y por qué redondeas.]
 
 <img src="capturas/6.png" width="600">
