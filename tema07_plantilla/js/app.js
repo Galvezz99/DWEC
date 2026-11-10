@@ -530,6 +530,22 @@ function crearUsuario(nombreCompleto) {
 }
 
 function mostrarIniciales() {
-  // TODO: lee #nombre6. Si está vacío, avisa en #salida6b.
-  // TODO: si no, escribe en #salida6b «Iniciales: LMO · usuario: lmo042».
+
+console.log("Mostrar iniciales ejecutada");
+
+const nombre=document.getElementById("nombre6").value.trim();
+const salida=document.getElementById("salida6b");
+
+//Si esta vacio,avisa y detiene la ejecucion
+if(nombre===""){
+  salida.textContent="El nombre no puede estar vacio";ç
+  return;
+}
+
+//si no,calcula y escribe el formato solicitado
+const ini=iniciales(nombre);
+const usuario=crearUsuario(nombre);
+salida.textContent=`Iniciales:${ini} · usuario: ${usuario}`;
+
+
 }
