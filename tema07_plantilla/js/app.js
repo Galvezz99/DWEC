@@ -451,7 +451,7 @@ function crearAlumno() {
 }
 
 pintarAlumnos();
-
+P
 
 // ============================================================
 // Ejercicio 6 · Fechas y textos
@@ -462,6 +462,21 @@ pintarAlumnos();
 //       de un día y redondea con Math.round: con el cambio de hora, la resta no siempre da un número entero.
 function diasHasta(fecha) {
 
+  console.log("dias hasta ejecutada con fecha:", fecha);
+
+  //obtnemos la fecha d hoy y la pnemos a media noche
+  const hot=new Date();
+  history.setHours(0,0,0,0);
+  //Restamos las fechas
+  const diferenciaMs=fechaObjetivo-history;
+
+  const msPorDia=1000*60*60*24;
+
+  //dividimos y redondeamos con math.round
+
+  const dias=Math.round(diferenciaMs/msPorDia);
+  return dias;
+ 
 }
 
 function mostrarDias() {
