@@ -215,8 +215,7 @@ function verCuadrados() {
  
   console.log("verCuadrados ejecutada");
 
-  const cuadrados=transformar(numeros, (n)=> n **2);
-
+  const resultado=transformar(numeros, (n)=> n **2);
   mostrar3("Cuadrados",resultado,numeros.map((n) => n**2));
   console.log("Ejercicio 3:cuadrados ->", resultado);
 }
@@ -288,7 +287,7 @@ class Alumno {
     console.log("anadir nota ejecutada con nota:",nota);
 
       // Validamos que sea un número real
-      if(typeof nota !== 'number' || Number.isNan(nota) || nota < 0 || nota >10){
+    if(typeof nota !== 'number' || Number.isNaN(nota) || nota < 0 || nota >10){
         return false;
       }
 
@@ -465,10 +464,10 @@ function diasHasta(fecha) {
   console.log("dias hasta ejecutada con fecha:", fecha);
 
   //obtnemos la fecha d hoy y la pnemos a media noche
-  const hot=new Date();
-  history.setHours(0,0,0,0);
+  const hoy=new Date();
+  hoy.setHours(0,0,0,0);
 
-  const fehcaObjetivo=new Date(fecha);
+  const fechaObjetivo=new Date(fecha);
   fechaObjetivo.setHours(0, 0, 0, 0);
   //Restamos las fechas
   const diferenciaMs=fechaObjetivo-hoy;
@@ -478,7 +477,6 @@ function diasHasta(fecha) {
 
   return Math.round(diferenciaMs/msPorDia);
 
- 
 }
 
 function mostrarDias() {
@@ -536,7 +534,7 @@ function crearUsuario(nombreCompleto) {
   console.log("Crear usuario ejecutaa con:",nombreCompleto);
 
   //Obtenemos las iniciales y las psamos a minusculas
-  const incialesMinus=iniciales(nombreCompleto).toLowerCase();
+  const inicialesMinus=iniciales(nombreCompleto).toLowerCase();
 
   //Generemos un numero entero aleatorio entre 0 y 999
   const numeroAleatorio=Math.floor(Math.random()*1000);
@@ -559,7 +557,7 @@ const salida=document.getElementById("salida6b");
 
 //Si esta vacio,avisa y detiene la ejecucion
 if(nombre===""){
-  salida.textContent="El nombre no puede estar vacio";ç
+  salida.textContent="El nombre no puede estar vacio";
   return;
 }
 
