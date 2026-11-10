@@ -85,7 +85,7 @@ function mostrarPrecio() {
 
   pintarLista("#salida1",[
     `Precio sin IVA: ${formatearEuros(precioSinIva)}`,
-    `Descuento: $ {descuento} %`,
+    `Descuento: ${descuento}%`,
     `IVA: ${iva}%`,
     `Precio final: ${formatearEuros(precioFinal)}`
   ]);
@@ -117,19 +117,15 @@ function comoTexto(pelicula) {
 //       sin llaves ni return. Comprueba después que cada botón sigue dando lo mismo.
 
 function verTitulos() {
-  const titulos = peliculas.map(function (pelicula) {
-    return pelicula.titulo;
-  });
+  const titulos = peliculas.map(pelicula=>pelicula.titulo);
   pintarLista("#salida2", titulos);
   document.querySelector("#mensaje2").textContent = `${titulos.length} títulos.`;
   console.log("Ejercicio 2: map →", titulos);
 }
 
 function verLargas() {
-  const largas = peliculas.filter(function (pelicula) {
-    return pelicula.duracion > 120;
-  });
-  pintarLista("#salida2", largas.map(comoTexto));   // comoTexto ya es una función: se pasa sin paréntesis
+  const largas = peliculas.filter(pelicula=>pelicula.duracion>120);
+  pintarLista("#salida2", largas.map(comoTexto)); 
   document.querySelector("#mensaje2").textContent = `${largas.length} películas duran más de 2 horas.`;
   console.log("Ejercicio 2: filter →", largas);
 }
@@ -153,7 +149,7 @@ function verDuracionTotal() {
 }
 
 function buscarAntigua() {
-  const antigua=peliculas.find(p => p.año < 1990);
+  const antigua=peliculas.find(p => p.anio < 1990);
 
   const mensaje2=document.getElementById("mensaje2");
   const salida2=document.getElementById("salida2");
@@ -186,7 +182,7 @@ function transformar(lista, operacion) {
   const resultado=[];
 
   for(const elemento of lista){
-    resultado.push(operacion(alemento));
+    resultado.push(operacion(elemento));
   }
 
   return resultado;
@@ -246,12 +242,9 @@ pintarLista("#salida-absolutos", absolutos);
 // TODO: crearContador(paso) guarda una variable cuenta que empieza en 0 y DEVUELVE una función.
 //       Cada vez que se llama a esa función, suma paso a cuenta y devuelve el valor nuevo.
 //       paso vale 1 por defecto.
-function crearContador(paso) {
-
+function crearContador(paso=1) {
   console.log("Crear contador ejecutada con paso:",paso);
-
   let cuenta=0;
-
   return function(){
     cuenta+=paso;
     return cuenta;
@@ -343,7 +336,6 @@ const alumnos = [];
 
 
 //Crear un alumno normal y añadirle dos notas validas
-
 const alumno1=new Alumno("Lucia Martin", "2ºDAW");
 alumno1.anadirNota(8.5);
 alumno1.anadirNota(9.0);
@@ -354,10 +346,7 @@ alumnos.push(alumno1);
 const alumno2=new AlumnoFCT("Carlos Ruiz","2ºDAW","Tecno sur");
 alumno2.anadirNota(7.0);
 alumno2.anadirNota(6.5);
-alumno2.push(alumno2);
-
-
-
+alumnos.push(alumno2);
 
 
 // Ya está hecha: pinta una tarjeta por alumno en #listaAlumnos y actualiza #totalAlumnos
