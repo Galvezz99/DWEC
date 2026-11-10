@@ -52,11 +52,15 @@ Se muestra el cálculo de un precio con una base de 100, un IVA del 21% y un des
 
 ## Reflexión
 
-[De 5 a 8 líneas: ¿qué cambia al pasar un callback de function a flecha? ¿Cuándo hace falta el return? ¿Por qué un método no se escribe con flecha? Pon un ejemplo de tu propio código.]
+Cuando cambiamos un function por una función flecha, el código queda más corto y sencillo de leer. Además, las flechas utilizan el this del contexto en el que se encuentran. En cuanto al return, no hace falta escribirlo cuando la función tiene una sola expresión y no usamos llaves {}. Por ejemplo, en p => p.anio < 1990, el resultado se devuelve directamente.
 
 ## Fuentes
 
-- [Título de la página](https://enlace-a-la-fuente)
+-https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions?
+
+-https://es.javascript.info/
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array?
 
 ## Uso de IA
 
