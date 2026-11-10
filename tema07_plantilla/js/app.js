@@ -512,6 +512,21 @@ function iniciales(nombreCompleto) {
 //       «lmo042». Pista: Math.random, Math.floor y padStart(3, "0").
 function crearUsuario(nombreCompleto) {
 
+  console.log("Crear usuario ejecutaa con:",nombreCompleto);
+
+  //Obtenemos las iniciales y las psamos a minusculas
+  const incialesMinus=iniciales(nombreCompleto).toLowerCase();
+
+  //Generemos un numero entero aleatorio entre 0 y 999
+  const numeroAleatorio=Math.floor(Math.random()*1000);
+
+  //Convertimos a cadena y rellenamos con ceros
+  const cifras=String(numeroAleatorio).padStart(3,"0");
+
+  //Concatenamos y devolvemos resultado final
+  return inicialesMinus+cifras;
+
+
 }
 
 function mostrarIniciales() {
