@@ -40,7 +40,7 @@ Se muestra el cálculo de un precio con una base de 100, un IVA del 21% y un des
 
 ![Las tarjetas de los alumnos]
 
-<img src="capturas/4.png" alt="El desglose del precio y una lista de películas" width="600">
+<img src="capturas/4.png" width="600">
 
 [Al menos cuatro alumnos, alguno en prácticas. Cómo decide tu código si crea un Alumno o un AlumnoFCT.]
 
@@ -49,6 +49,9 @@ Se muestra el cálculo de un precio con una base de 100, un IVA del 21% y un des
 ![Los días que faltan para una fecha y unas iniciales](capturas/e-ej6-fechas-textos.png)
 
 [Qué fecha has probado, cuántos días salen y por qué redondeas.]
+
+<img src="capturas/6.png" width="600">
+
 
 ## Reflexión
 
