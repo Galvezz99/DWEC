@@ -107,9 +107,6 @@
                   </div>
                 </div>
               </div>
-
-
-
               </fieldset>
 
               <!-- TODO: un segundo <fieldset> «Tu inscripción» con la modalidad (select), el taller (tres radio
@@ -117,6 +114,23 @@
                          (textarea con su contador) y la casilla de las condiciones. -->
 
               <!-- TODO: los botones «Enviar inscripción» (submit) y «Borrar» (reset). -->
+              <fieldset class="mb-4">
+                <legend class="fs-5" border-bottom pb-1>Tu inscripcion</legend>
+
+                <div class="mb-3">
+                  <label for="modalidad" class="form-label">Modalidad *</label>
+                  <select name="modalidad" id="modalidad" class="form-select" required>
+                    <option value="">Selecciona una modalidad</option>
+                    <option value="presencial">Presencial, en el salon de actos</option>
+                    <option value="online">Online, por videoconferencia</option>
+                  </select>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </fieldset>
+
+
+
+
 
             </form>
           </div>
