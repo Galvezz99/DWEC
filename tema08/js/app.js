@@ -88,7 +88,7 @@ function mensajeDe(campo) {
   if(campo.validity.customError){
     return campo.validationMessage;
   }
-  
+
 return "Revisa este campo";
 }
 
@@ -99,12 +99,34 @@ return "Revisa este campo";
 // ============================================================
 
 form.addEventListener("submit", (e) => {
-  // TODO 1: e.preventDefault(), para que no se envíe todavía.
-  // TODO 2: coge todos los campos: e.target.querySelectorAll("input, select, textarea").
-  // TODO 3: recórrelos con forEach. Si campo.checkValidity() es true, quitarError(campo);
-  //         si no, mostrarError(campo, mensajeDe(campo)) y apúntate el primero que falla.
-  // TODO 4: si alguno ha fallado, pon el foco en el primero (focus()) y no sigas (return).
-  // TODO 5: si todo está bien, envíalo de verdad: e.target.submit().
+  console.log("Validando el formulario...");
+  e.preventDefault();
+
+  comprobarCorreos();
+
+  const campos=e.target.querySelectorAll("input,select,textarea");
+  let primerCampoIncorrecto=null;
+
+  campos.forEach((campo)=>{
+    if(campo.checkValidity()){
+      quitarError(campo);
+    }else{
+      mostrarError(campo, mensajeDe(campo));
+
+      if(primerCampoIncorrecto===null){
+        primerCampoIncorrecto=campo;
+      }
+    }
+  });
+
+  if(primerCampoIncorrecto!==null){
+    console.log("Hay errores. El foco pasa al primer campo incorrecto");
+    primerCampoIncorrecto.focus();
+    return;
+  }
+
+  console.log("Formulario correcto. Enviando los datos por GET");
+  e.target.submit();
 });
 
 
