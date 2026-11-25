@@ -164,6 +164,24 @@ const contador=document.querySelector("#contador");
   }
 
 
+  email.addEventListener("input",()=>{
+    comprobarCorreos();
+
+    if (email.checkValidity()) {
+    quitarError(email);
+  }
+
+    if (email2.checkValidity()) {
+    quitarError(email2);
+  }
+});
+  email2.addEventListener("input",()=>{
+    comprobarCorreos();
+    if(email2.checkValidity()){
+      quitarError(email2);
+    }
+  });
+
 // ============================================================
 // Ejercicio 6 · Resumen con FormData
 // ============================================================
