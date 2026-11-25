@@ -64,12 +64,30 @@ const OBLIGATORIOS = {
 };
 
 function mensajeDe(campo) {
-  // TODO: mira campo.validity y devuelve el texto que toque:
-  //       · valueMissing → OBLIGATORIOS[campo.name || campo.id]
-  //       · typeMismatch → el de un correo mal escrito
-  //       · tooShort → «Escribe al menos N caracteres.» (campo.minLength)
-  //       · patternMismatch, rangeUnderflow o rangeOverflow → campo.title
-  //       · customError → campo.validationMessage (el de setCustomValidity)
+
+  if(campo.validity.valueMissing){
+    return OBLIGATORIOS [campo.name || campo.id] || "completa este campo";
+  }
+
+  if(campo.validity.typeMismatch){
+    return "Escribe una direccion de correo electronico valida";
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+)
 }
 
 
