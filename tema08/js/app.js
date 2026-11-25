@@ -134,19 +134,13 @@ form.addEventListener("submit", (e) => {
 // Ejercicio 5 · Eventos de los campos
 // ============================================================
 
-// TODO: el contador de la textarea: con el evento "input" de #comentarios, escribe en #contador
-//       cuántos caracteres lleva (value.length).
+//Contador de caracteres de los comentarios
+const comentarios=document.querySelector("#comentarios");
+const contador=document.querySelector("#contador");
 
-// TODO: el nivel: con el evento "input" de #nivel, escribe su valor en #valorNivel.
-
-// TODO: comprobarCorreos(): si #email2 no está vacío y no coincide con #email, ponle un error propio con
-//       setCustomValidity("Los dos correos no coinciden."); si coincide, quítaselo con setCustomValidity("").
-//       Llámala en el evento "input" de los dos correos y también al empezar la validación del submit.
-
-// TODO: que el error desaparezca en cuanto se corrige: a cada campo, un "input" que llame a quitarError()
-//       si campo.checkValidity() ya es true.
-
-// TODO: con el evento "reset" del formulario, quita los errores y vuelve a poner el contador a 0 y el nivel a 5.
+  comentarios.addEventListener("input",() =>{
+    contador.textContent=comentarios.value.length;
+  });
 
 
 // ============================================================
