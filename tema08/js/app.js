@@ -54,8 +54,13 @@ function quitarError(campo) {
 
 // El texto de cada campo obligatorio cuando está vacío. La clave es el name (o el id, si no tiene name)
 const OBLIGATORIOS = {
-  nombre: "Escribe tu nombre y apellidos."
-  // TODO: email, email2, nacimiento, modalidad, taller y condiciones
+  nombre: "Escribe tu nombre y apellidos.",
+  email: "Escribe tu correo electronico.",
+  email2: "Repite tu correo electronico..",
+  nacimiento: "Indica tu fecha de nacimiento.",
+  modalidad: "Selecciona una modalidad",
+  taller: "selecciona uno de los talleres",
+  condiciones: "Tienes que aceptar las condiciones para inscribirte",
 };
 
 function mensajeDe(campo) {
