@@ -74,20 +74,22 @@ function mensajeDe(campo) {
   }
 
 
+  if(campo.validity.tooShort){
+    return `Escribe al menos ${campo.minLength} caracteres`;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-)
+  if (
+    campo.validity.patternMismatch ||
+    campo.validity.rangeUnderflow ||
+    campo.validity.rangeOverflow
+  ){
+    return campo.tittle;
+  }
+  if(campo.validity.customError){
+    return campo.validationMessage;
+  }
+  
+return "Revisa este campo";
 }
 
 
