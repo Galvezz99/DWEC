@@ -143,6 +143,27 @@ const contador=document.querySelector("#contador");
   });
 
 
+  // ver nivel seleccionado
+  const nivel=document.querySelector("#nivel");
+  const valorNivel=document.querySelector("#valorNivel");
+
+  nivel.addEventListener("input", ()=>{
+    valorNivel.textContent=nivel.value;
+  });
+
+  // cmprobar q los correos coinciden
+  const email=document.querySelector("#email");
+  const email2=document.querySelector("#email2");
+
+  function comprobarCorreos(){
+    if(email2.value !=="" && email2.value !== email.value){
+      email2.setCustomValidity("Los dos correos no coinciden");
+    }else{
+      email2.setCustomValidity("");
+    }
+  }
+
+
 // ============================================================
 // Ejercicio 6 · Resumen con FormData
 // ============================================================
