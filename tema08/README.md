@@ -26,7 +26,7 @@ En esta captura se muestra un mensaje del navegador al intentar enviar un campo 
 
 ### c) Ejercicio 3: lo que llega por GET
 
-![Los datos recibidos por GET](capturas/c-ej3-recibido.png)
+![Los datos recibidos por GET](capturas/3.png)
 
 En esta captura se muestran los datos enviados mediante GET, que aparecen en la dirección URL y posteriormente en una tabla de la página `recibido.html`.
 
@@ -34,7 +34,7 @@ El campo de repetir el correo no llega porque no tiene atributo `name`. Nunca en
 
 ### d) Ejercicio 4: los errores junto a cada campo
 
-![Los errores de validación](capturas/d-ej4-errores.png)
+![Los errores de validación](capturas/4.png)
 
 En esta captura se muestran varios errores de validación junto a sus respectivos campos. Los mensajes aparecen debajo de los campos para indicar qué se debe corregir.
 
@@ -61,9 +61,3 @@ Por eso utilizamos `e.target` para acceder al formulario que ha enviado los dato
 - [MDN - Validación de formularios](https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [MDN - URLSearchParams](https://developer.mozilla.org/es/docs/Web/API/URLSearchParams)
 - [MDN - FormData](https://developer.mozilla.org/es/docs/Web/API/FormData)
-
-## Uso de IA
-
-Se ha utilizado ChatGPT como ayuda para entender algunos apartados de la tarea, revisar el código JavaScript y resolver dudas durante el desarrollo.
-
-Después se ha revisado y probado el código para comprobar su funcionamiento y entender lo que hace cada parte.
