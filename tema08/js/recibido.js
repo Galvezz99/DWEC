@@ -26,3 +26,31 @@ if(location.search===""){
 
 // Seleccionamos el cuerpo de la tabla.
 const datos = document.querySelector("#datos");
+
+//comprobamos si han llegado datos
+
+if(parametros.size===0){
+  const aviso=document.createElement("p");
+  aviso.textContent="No ha llegado ningun dato";
+  datos.appendChild(aviso);
+}else{
+    for (const [campo, valor] of parametros){
+      console.log("Campo:", campo, "Valor:", valor);
+
+        const fila = document.createElement("tr");
+
+
+        const encabezado = document.createElement("th");
+        encabezado.textContent = campo;
+
+        const celda = document.createElement("td");
+        celda.textContent = valor;
+
+       
+        fila.appendChild(encabezado);
+        fila.appendChild(celda);
+
+
+        datos.appendChild(fila);
+    }
+}
