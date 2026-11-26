@@ -6,15 +6,8 @@
 
 console.log("recibido.js cargado");
 
-// location.search es la parte de la URL desde el ?, por ejemplo "?nombre=Luc%C3%ADa&taller=html"
+// location.search es la parte de la URL desde el ?.
 console.log("Ha llegado:", location.search);
 
-// URLSearchParams la separa en pares nombre → valor y decodifica las tildes y los espacios.
-// El modelo: un dato suelto, por su name
+// Creamos el objeto para leer los parámetros de la URL.
 const parametros = new URLSearchParams(location.search);
-console.log("nombre =", parametros.get("nombre"));
-
-// TODO: escribe location.search en #consulta (o «(nada)» si está vacío).
-// TODO: recorre los parámetros con for (const [campo, valor] of parametros) y añade a #datos una fila <tr>
-//       por par: un <th> con el campo y un <td> con el valor (textContent: son datos de fuera, nada de innerHTML).
-// TODO: si no ha llegado ningún dato, muestra un aviso en la página.
