@@ -182,6 +182,20 @@ const contador=document.querySelector("#contador");
     }
   });
 
+  //quitar error d cda campo  en cuanto sea valido
+
+  const todosLosCampos=form.querySelectorAll("input,select,textarea");
+
+  todosLosCampos.forEach((campo)=>{
+    if(campo !==email && campo !==email2){
+      campo.addEventListener("input",()=>{
+        if(campo.checkValidity()){
+          quitarError(campo);
+        }
+      });
+    }
+  });
+
 // ============================================================
 // Ejercicio 6 · Resumen con FormData
 // ============================================================
