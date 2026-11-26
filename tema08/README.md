@@ -20,7 +20,7 @@ En esta captura se muestra el formulario completo con mi nombre en la barra de n
 
 ### b) Ejercicio 2: el mensaje del navegador
 
-![El mensaje de validación del navegador](capturas/b-ej2-navegador.png)
+![El mensaje de validación del navegador](capturas/2.png)
 
 En esta captura se muestra un mensaje del navegador al intentar enviar un campo obligatorio vacío o con un formato incorrecto. También se ha probado a quitar un atributo `required` desde F12. Esto demuestra que la validación del navegador se puede modificar, por lo que el servidor también debe comprobar los datos.
 
