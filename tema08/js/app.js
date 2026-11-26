@@ -196,6 +196,27 @@ const contador=document.querySelector("#contador");
     }
   });
 
+  //Al borrar se limpian los errores y se restauran valores
+
+  form.addEventListener("reset",()=>{
+    console.log("Formulario restablecido");
+
+    todosLosCampos.forEach((campo)=>{
+      quitarError(campo);
+
+      if(campo.type==="email"){
+        campo.setCustomValidity("");
+      }
+    });
+
+    contador.textContent="0";
+    valorNivel.textContent="5";
+
+
+    document.querySelector("#resumen").textContent="";
+    document.querySelector("#avisoResumen").textContent="Pulsa VER RESUMEN para mostrar datos";
+  });
+
 // ============================================================
 // Ejercicio 6 · Resumen con FormData
 // ============================================================
