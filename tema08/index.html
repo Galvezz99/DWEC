@@ -51,7 +51,7 @@
       <div class="col-12 col-lg-7">
         <section class="card shadow-sm">
           <div class="card-body">
-            <form id="inscripcion" action="recibido.html" method="get">
+            <form id="inscripcion" action="recibido.html" method="get" novalidate>
 
               <fieldset class="mb-4">
                 <legend class="fs-5 border-bottom pb-1">Tus datos</legend>
@@ -102,7 +102,7 @@
                 <div class="col-12 col-md-6">
                   <div class="mb-3">
                     <label for="nacimiento" class="form-label">Fecha de nacimiento *</label>
-                    <input type="date" id="nacimiento" name="nacimiento" class="form-control" autocomplete="bday" required min="1940-01-01" max="2010-12-31" title="La fecha debe estar entre el 01/01*1940 y el 31/12/2010">
+                    <input type="date" id="nacimiento" name="nacimiento" class="form-control" autocomplete="bday" required min="1940-01-01" max="2010-12-31" title="La fecha debe estar entre el 01/01/1940 y el 31/12/2010">
                     <div class="invalid-feedback"></div>
                   </div>
                 </div>
@@ -172,16 +172,15 @@
             </fieldset>
 
 
+<div class="d-flex gap-2">
+      <button type="submit" class="btn btn-primary">
+      <i class="bi bi-send"></i> Enviar inscripción
+      </button>
 
-              <div class="d-flex gap-2">
-                <button type="submit" class="btn btn-primary">
-                  <i class="bi bi-eraser"></i> Borrar
-                </button>
-              </div>
-            </form>
-          </div>
-        </section>
-      </div>
+    <button type="reset" class="btn btn-outline-secondary">
+    <i class="bi bi-eraser"></i> Borrar
+    </button>
+</div>
 
       <!-- TODO (ejercicio 6): una tarjeta «Resumen antes de enviar» con el botón #verResumen,
                                 el párrafo #avisoResumen y la lista #resumen. -->
