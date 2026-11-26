@@ -31,7 +31,7 @@ function mostrarError(campo, mensaje) {
 }
 
 function quitarError(campo) {
- const contenedor = campo.closet(".mb-3");
+ const contenedor = campo.closest(".mb-3");
 
  if(campo.type==="radio"){
   const radios=form.querySelectorAll(`[name="${campo.name}"]`);
@@ -83,7 +83,7 @@ function mensajeDe(campo) {
     campo.validity.rangeUnderflow ||
     campo.validity.rangeOverflow
   ){
-    return campo.tittle;
+    return campo.title;
   }
   if(campo.validity.customError){
     return campo.validationMessage;
