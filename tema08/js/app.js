@@ -221,8 +221,28 @@ const contador=document.querySelector("#contador");
 // Ejercicio 6 · Resumen con FormData
 // ============================================================
 
-// TODO: con el evento "click" de #verResumen:
-//       · const datos = new FormData(form);
-//       · recórrelo con for (const [campo, valor] of datos) y pinta un <li class="list-group-item"> por par
-//         en #resumen (createElement y textContent; si el valor está vacío, «(vacío)»);
-//       · escribe en #avisoResumen cuántos datos hay y por qué falta «Repite el correo».
+const botonResumen=document.querySelector("#verResumen");
+const listaResumen=document.querySelector("#resumen");
+const avisoResumen=document.querySelector("#avisoResumen");
+
+  botonResumen.addEventListener("click",()=>{
+    console.log("Generando el resumen con FormData");
+
+    const datos=new FormData(form);
+    listaResumen.textContent="";
+
+    let cantidadDatos=0;
+
+    for(const[campo,valor]of datos){
+      const elemento=document.createElement("li");
+      elemento.classList.add("list-group-item");
+
+      const valorVisible=valor=== "" ? "(vacio)" : valor;
+      elemento.textContent=`${campo}: ${valorVisible}`;
+
+      listaResumen.appendChild(elemento);
+      cantidadDatos++;
+    }
+
+    avisoResumen.textContent= `${cantidadDatos} datos. REPITE EL CORREO no sale porque ese campo no tiene atributo name`;
+  })
